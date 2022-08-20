@@ -4,7 +4,7 @@ module.exports = {
   title: 'RKE1',
   tagline: '',
   url: 'https://rancher.github.io/',
-  baseUrl: '/',
+  baseUrl: '/rke1-docs/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
