@@ -27,7 +27,7 @@ module.exports = {
       title: "",
       logo: {
         alt: 'logo',
-        src: 'img/rancher-logo-horiz-color.svg',
+        src: 'img/logo-horizontal-rke.svg',
       },
       items: [
         {
@@ -69,5 +69,5 @@ module.exports = {
         },
       },
     ],
-  ], 
+  ],
 };
