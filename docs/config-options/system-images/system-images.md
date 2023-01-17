@@ -12,7 +12,7 @@ Below is an example of the list of system images used to deploy Kubernetes throu
 
 - For RKE v0.2.x and below, the map of versions and the system image versions is located here: https://github.com/rancher/types/blob/release/v2.2/apis/management.cattle.io/v3/k8s_defaults.go
 
-- For RKE v0.3.0 and above, the map of versions and the system image versions is located here: https://github.com/rancher/kontainer-driver-metadata/blob/master/rke/k8s_rke_system_images.go
+- For RKE v0.3.0 and above, the map of versions and the system image versions is located here: https://github.com/rancher/kontainer-driver-metadata/blob/release-v2.7/rke/k8s_rke_system_images.go
 
 > **Note:** As versions of RKE are released, the tags on these images will no longer be up to date. This list is specific for `v1.10.3-rancher2`.
 
