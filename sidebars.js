@@ -1,6 +1,7 @@
 module.exports = {
   mySidebar: [
     'introduction',
+    'os/os',
     {
       type: 'category',
       label: 'RKE Kubernetes Installation',
@@ -77,6 +78,25 @@ module.exports = {
         },
         'config-options/audit-log/audit-log',
         'config-options/dual-stack/dual-stack',
+        {
+          type: 'category',
+          label: 'Add-Ons',
+          link: {type: 'doc', id: 'config-options/add-ons/add-ons'},
+          items: [
+            {
+              type: 'category',
+              label: 'Network Plugins',
+              link: {type: 'doc', id: 'config-options/add-ons/network-plugins/network-plugins'},
+              items: [
+                'config-options/add-ons/network-plugins/custom-network-plugin-example/custom-network-plugin-example'
+              ]
+            },
+            'config-options/add-ons/dns/dns',
+            'config-options/add-ons/ingress-controllers/ingress-controllers',
+            'config-options/add-ons/metrics-server/metrics-server',
+            'config-options/add-ons/user-defined-add-ons/user-defined-add-ons'
+          ]
+        }
       ],
     },
     'example-yamls/example-yamls',
