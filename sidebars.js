@@ -5,25 +5,36 @@ module.exports = {
     {
       type: 'category',
       label: 'RKE Kubernetes Installation',
-      link: {type: 'doc', id: 'installation/installation'},
-      items: ['installation/certs/certs'],
+      link: {
+        type: 'doc',
+        id: 'installation/installation'
+      },
+      items: [
+        'installation/certs/certs'
+      ],
     },
     {
       type: 'category',
       label: 'Upgrades',
-      link: {type: 'doc', id: 'upgrades/upgrades'},
-      items:[
-          'upgrades/how-upgrades-work/how-upgrades-work',
-          'upgrades/maintaining-availability/maintaining-availability',
-          'upgrades/configuring-strategy/configuring-strategy',
+      link: {
+        type: 'doc',
+        id: 'upgrades/upgrades'
+      },
+      items: [
+        'upgrades/how-upgrades-work/how-upgrades-work',
+        'upgrades/maintaining-availability/maintaining-availability',
+        'upgrades/configuring-strategy/configuring-strategy',
       ],
     },
     'kubeconfig/kubeconfig',
     {
       type: 'category',
       label: 'Backups and Disaster Recovery',
-      link: {type: 'doc', id: 'etcd-snapshots/etcd-snapshots'},
-      items:[
+      link: {
+        type: 'doc',
+        id: 'etcd-snapshots/etcd-snapshots'
+      },
+      items: [
         'etcd-snapshots/one-time-snapshots/one-time-snapshots',
         'etcd-snapshots/recurring-snapshots/recurring-snapshots',
         'etcd-snapshots/restoring-from-backup/restoring-from-backup',
@@ -36,8 +47,11 @@ module.exports = {
     {
       type: 'category',
       label: 'Kubernetes Configuration Options',
-      link: {type: 'doc', id: 'config-options/config-options'},
-      items:[
+      link: {
+        type: 'doc',
+        id: 'config-options/config-options'
+      },
+      items: [
         'config-options/nodes/nodes',
         'config-options/private-registries/private-registries',
         'config-options/bastion-host/bastion-host',
@@ -45,7 +59,10 @@ module.exports = {
         {
           type: 'category',
           label: 'Default Kubernetes Services',
-          link: {type: 'doc', id: 'config-options/services/services'},
+          link: {
+            type: 'doc',
+            id: 'config-options/services/services'
+          },
           items: [
             'config-options/services/services-extras/services-extras',
             'config-options/services/external-etcd/external-etcd'
@@ -58,7 +75,10 @@ module.exports = {
         {
           type: 'category',
           label: 'Cloud Providers',
-          link: {type: 'doc', id: 'config-options/cloud-providers/cloud-providers'},
+          link: {
+            type: 'doc',
+            id: 'config-options/cloud-providers/cloud-providers'
+          },
           items: [
             'config-options/cloud-providers/aws/aws',
             'config-options/cloud-providers/azure/azure',
@@ -66,7 +86,10 @@ module.exports = {
             {
               type: 'category',
               label: 'vSphere Cloud Provider',
-              link: {type: 'doc', id: 'config-options/cloud-providers/vsphere/vsphere'},
+              link: {
+                type: 'doc',
+                id: 'config-options/cloud-providers/vsphere/vsphere'
+              },
               items: [
                 'config-options/cloud-providers/vsphere/enabling-uuid/enabling-uuid',
                 'config-options/cloud-providers/vsphere/config-reference/config-reference',
@@ -81,12 +104,18 @@ module.exports = {
         {
           type: 'category',
           label: 'Add-Ons',
-          link: {type: 'doc', id: 'config-options/add-ons/add-ons'},
+          link: {
+            type: 'doc',
+            id: 'config-options/add-ons/add-ons'
+          },
           items: [
             {
               type: 'category',
               label: 'Network Plugins',
-              link: {type: 'doc', id: 'config-options/add-ons/network-plugins/network-plugins'},
+              link: {
+                type: 'doc',
+                id: 'config-options/add-ons/network-plugins/network-plugins'
+              },
               items: [
                 'config-options/add-ons/network-plugins/custom-network-plugin-example/custom-network-plugin-example'
               ]
@@ -103,8 +132,11 @@ module.exports = {
     {
       type: 'category',
       label: 'Troubleshooting',
-      link: {type: 'doc', id: 'troubleshooting/troubleshooting'},
-      items:[
+      link: {
+        type: 'doc',
+        id: 'troubleshooting/troubleshooting'
+      },
+      items: [
         'troubleshooting/ssh-connectivity-errors/ssh-connectivity-errors',
         'troubleshooting/provisioning-errors/provisioning-errors'
       ],
