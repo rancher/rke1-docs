@@ -67,6 +67,9 @@ module.exports = {
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
         },
+        googleTagManager: {
+          containerId: 'GTM-57KS2MW',
+        },
       },
     ],
   ],
