@@ -7,7 +7,7 @@ aliases:
 
 There are lots of different [configuration options](config-options/) that can be set in the cluster configuration file for RKE. Here are some examples of files:
 
-> **Note for Rancher 2 users** If you are configuring Cluster Options using a [Config File]({{<baseurl>}}/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#cluster-config-file) when creating [Rancher Launched Kubernetes]({{<baseurl>}}/rancher/v2.x/en/cluster-provisioning/rke-clusters/), the names of services should contain underscores only: `kube_api` and `kube_controller`. This only applies to Rancher v2.0.5 and v2.0.6.
+> **Note for Rancher 2 users** If you are configuring Cluster Options using a [Config File](https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#rke-cluster-config-file-reference) when creating [Rancher Launched Kubernetes](https://ranchermanager.docs.rancher.com/pages-for-subheaders/launch-kubernetes-with-rancher), the names of services should contain underscores only: `kube_api` and `kube_controller`. This only applies to Rancher v2.0.5 and v2.0.6.
 
 ## Minimal `cluster.yml` example
 
@@ -62,8 +62,8 @@ nodes:
 ignore_docker_version: false
 
 # Enable running cri-dockerd
-# Up to Kubernetes 1.23, kubelet contained code called dockershim 
-# to support Docker runtime. The replacement is called cri-dockerd 
+# Up to Kubernetes 1.23, kubelet contained code called dockershim
+# to support Docker runtime. The replacement is called cri-dockerd
 # and should be enabled if you want to keep using Docker as your
 # container runtime
 # Only available to enable in Kubernetes 1.21 and higher
@@ -101,7 +101,7 @@ bastion_host:
 #
 #     -----END RSA PRIVATE KEY-----
 
-# Set the name of the Kubernetes cluster  
+# Set the name of the Kubernetes cluster
 cluster_name: mycluster
 
 
@@ -122,7 +122,7 @@ cluster_name: mycluster
 kubernetes_version: v1.10.3-rancher2
 
 # System Images are defaulted to a tag that is mapped to a specific
-# Kubernetes Version and not required in a cluster.yml. 
+# Kubernetes Version and not required in a cluster.yml.
 # Each individual system image can be specified if you want to use a different tag.
 #
 # For RKE v0.2.x and below, the map of Kubernetes versions and their system images is
@@ -176,7 +176,7 @@ services:
       # This must match the service_cluster_ip_range in kube-controller
       service_cluster_ip_range: 10.43.0.0/16
       # Expose a different port range for NodePort services
-      service_node_port_range: 30000-32767    
+      service_node_port_range: 30000-32767
       pod_security_policy: false
       # Encrypt secret data at Rest
       # Available as of v0.3.1
@@ -383,7 +383,7 @@ ingress:
     strategy: RollingUpdate
     rollingUpdate:
       maxUnavailable: 5
-      
+
 # All add-on manifests MUST specify a namespace
 addons: |-
     ---
