@@ -13,22 +13,6 @@ Each version of RKE has a specific [list of supported Kubernetes versions.](#lis
 
 In case the Kubernetes version is defined in the `kubernetes_version` directive and under the `system-images` directive, the `system-images` configuration will take precedence over the `kubernetes_version`.
 
-This page covers the following topics:
-
-- [How upgrades work](#how-upgrades-work)
-- [Prerequisites](#prerequisites)
-- [Upgrading Kubernetes](#upgrading-kubernetes)
-- [Configuring the upgrade strategy](#configuring-the-upgrade-strategy)
-- [Maintaining availability for applications during upgrades](#maintaining-availability-for-applications-during-upgrades)
-- [Listing supported Kubernetes versions](#listing-supported-kubernetes-versions)
-- [Kubernetes version precedence](#kubernetes-version-precedence)
-- [Using an unsupported Kubernetes version](#using-an-unsupported-kubernetes-version)
-- [Mapping the Kubernetes version to services](#mapping-the-kubernetes-version-to-services)
-- [Service upgrades](#service-upgrades)
-- [Upgrading Nodes Manually](#upgrading-nodes-manually)
-- [Rolling Back the Kubernetes Version](#rolling-back-the-kubernetes-version)
-- [Troubleshooting](#troubleshooting)
-
 ### How Upgrades Work
 
 In [this section,](upgrades/how-upgrades-work) you'll learn what happens when you edit or upgrade your RKE Kubernetes cluster.

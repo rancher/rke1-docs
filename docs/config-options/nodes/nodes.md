@@ -5,27 +5,6 @@ weight: 210
 
 The `nodes` directive is the only required section in the `cluster.yml` file. It's used by RKE to specify cluster node(s), ssh credentials used to access the node(s) and which roles these nodes will be in the Kubernetes cluster.
 
-This section covers the following topics:
-
-- [Node configuration example](#node-configuration-example)
-- [Kubernetes roles](#kubernetes-roles)
-  - [etcd](#etcd)
-  - [Controlplane](#controlplane)
-  - [Worker](#worker)
-- [Node options](#node-options)
-  - [Address](#address)
-  - [Internal address](#internal-address)
-  - [Overriding the hostname](#overriding-the-hostname)
-  - [SSH port](#ssh-port)
-  - [SSH users](#ssh-users)
-  - [SSH key path](#ssh-key-path)
-  - [SSH key](#ssh-key)
-  - [SSH certificate path](#ssh-certificate-path)
-  - [SSH certificate](#ssh-certificate)
-  - [Docker socket](#docker-socket)
-  - [Labels](#labels)
-  - [Taints](#taints)
-
 # Node Configuration Example
 
 The following example shows node configuration in an example `cluster.yml`:

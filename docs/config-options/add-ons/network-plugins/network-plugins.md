@@ -12,24 +12,6 @@ RKE provides the following network plug-ins that are deployed as add-ons:
 
 > After you launch the cluster, you cannot change your network provider. Therefore, choose which network provider you want to use carefully, as Kubernetes doesn’t allow switching between network providers. Once a cluster is created with a network provider, changing network providers would require you tear down the entire cluster and all its applications.
 
-- [Changing the Default Network Plug-in](#changing-the-default-network-plug-in)
-- [Disabling Deployment of a Network Plug-in](#disabling-deployment-of-a-network-plug-in)
-- [Network Plug-in Options](#network-plug-in-options)
-- [Canal](#canal)
-  - [Canal Network Plug-in Options](#canal-network-plug-in-options)
-  - [Canal Interface](#canal-interface)
-  - [Canal Network Plug-in Tolerations](#canal-network-plug-in-tolerations)
-- [Flannel](#flannel)
-  - [Flannel Network Plug-in Options](#flannel-network-plug-in-options)
-  - [Flannel Interface](#flannel-interface)
-- [Calico](#calico)
-  - [Calico Network Plug-in Options](#calico-network-plug-in-options)
-  - [Calico Cloud Provider](#calico-cloud-provider)
-  - [Calico Network Plug-in Tolerations](#calico-network-plug-in-tolerations)
-- [Weave](#weave)
-  - [Weave Network Plug-in Options](#weave-network-plug-in-options)
-- [Custom Network Plug-ins](#custom-network-plug-ins)
-
 # Changing the Default Network Plug-in
 
 By default, the network plug-in is `canal`. If you want to use another network plug-in, you need to specify which network plug-in to enable at the cluster level in the `cluster.yml`.

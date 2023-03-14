@@ -4,16 +4,7 @@ description: RKE is a fast, versatile Kubernetes installer you can use to instal
 weight: 50
 ---
 
-RKE is a fast, versatile Kubernetes installer that you can use to install Kubernetes on your Linux hosts. You can get started in a couple of quick and easy steps:
-
-1. [Download the RKE Binary](#download-the-rke-binary)
-    1. [Alternative RKE macOS Install - Homebrew](#alternative-rke-macos-x-install-homebrew)
-    1. [Alternative RKE macOS Install - MacPorts](#alternative-rke-macos-install-macports)
-1. [Prepare the Nodes for the Kubernetes Cluster](#prepare-the-nodes-for-the-kubernetes-cluster)
-1. [Creating the Cluster Configuration File](#creating-the-cluster-configuration-file)
-1. [Deploying Kubernetes with RKE](#deploying-kubernetes-with-rke)
-1. [Save your Files](#save-your-files)
-1. [Interacting with your Kubernetes Cluster](#interacting-with-your-kubernetes-cluster)
+RKE is a fast, versatile Kubernetes installer that you can use to install Kubernetes on your Linux hosts. You can get started in a couple of quick and easy steps
 
 ## Download the RKE binary
 
@@ -181,7 +172,7 @@ The Kubernetes cluster state, which consists of the cluster configuration file `
 
 As of v0.2.0, RKE creates a `.rkestate` file in the same directory that has the cluster configuration file `cluster.yml`. The `.rkestate` file contains the current state of the cluster including the RKE configuration and the certificates. It is required to keep this file in order to update the cluster or perform any operation on it through RKE.
 
-Before v0.2.0, RKE saved the Kubernetes cluster state as a secret. When updating the state, RKE pulls the secret, updates/changes the state and saves a new secret.   
+Before v0.2.0, RKE saved the Kubernetes cluster state as a secret. When updating the state, RKE pulls the secret, updates/changes the state and saves a new secret.
 
 ## Interacting with your Kubernetes cluster
 
