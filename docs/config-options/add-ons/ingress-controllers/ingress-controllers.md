@@ -4,20 +4,11 @@ description: By default, RKE deploys the NGINX ingress controller. Learn how to 
 weight: 262
 ---
 
-- [Default Ingress](#default-ingress)
-- [Scheduling Ingress Controllers](#scheduling-ingress-controllers)
-- [Ingress Priority Class Name](#ingress-priority-class-name)
-- [Tolerations](#tolerations)
-- [Disabling the Default Ingress Controller](#disabling-the-default-ingress-controller)
-- [Configuring NGINX Ingress Controller](#configuring-nginx-ingress-controller)
-- [Disabling NGINX Ingress Default Backend](#disabling-nginx-ingress-default-backend)
-- [Configuring an NGINX Default Certificate](#configuring-an-nginx-default-certificate)
-
 ### Default Ingress
 
 By default, RKE deploys the NGINX ingress controller on all schedulable nodes.
 
-> **Note:** As of v0.1.8, only workers are considered schedulable nodes, but before v0.1.8, worker and controlplane nodes were considered schedulable nodes.  
+> **Note:** As of v0.1.8, only workers are considered schedulable nodes, but before v0.1.8, worker and controlplane nodes were considered schedulable nodes.
 
 RKE will deploy the ingress controller as a DaemonSet with `hostNetwork: true`, so ports `80`, and `443` will be opened on each node where the controller is deployed.
 
@@ -193,7 +184,7 @@ Setting up a default certificate is especially helpful in environments where a w
 4. Define your ingress resource with the following `default-ssl-certificate` argument, which references the secret we created earlier under `extra_args` in your `cluster.yml`:
 
     ```yaml
-    ingress: 
+    ingress:
       provider: "nginx"
       extra_args:
         default-ssl-certificate: "ingress-nginx/ingress-default-cert"

@@ -3,23 +3,6 @@ title: DNS providers
 weight: 262
 ---
 
-- [Available DNS Providers](#available-dns-providers)
-- [Disabling deployment of a DNS Provider](#disabling-deployment-of-a-dns-provider)
-- [CoreDNS](#coredns)
-  - [Scheduling CoreDNS](#scheduling-coredns)
-  - [Upstream nameservers](#coredns-upstream-nameservers)
-  - [Priority Class Name](#coredns-priority-class-name)
-  - [Tolerations](#coredns-tolerations)
-- [kube-dns](#kube-dns)
-  - [Scheduling kube-dns](#scheduling-kube-dns)
-  - [Upstream nameservers](#kube-dns-upstream-nameservers)
-  - [Priority Class Name](#kube-dns-priority-class-name)
-  - [Tolerations](#kube-dns-tolerations)
-- [NodeLocal DNS](#nodelocal-dns)
-  - [Configuring NodeLocal DNS](#configuring-nodelocal-dns)
-  - [Priority Class Name](#nodelocal-priority-class-name)
-  - [Removing NodeLocal DNS](#removing-nodelocal-dns)
-
 # Available DNS Providers
 
 RKE provides the following DNS providers that can be deployed as add-ons:
