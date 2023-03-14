@@ -2,41 +2,9 @@
 title: Requirements
 weight: 5
 ---
-**In this section:**
 
-<!-- TOC -->
-- [Operating System](#operating-system)
-  - [General Linux Requirements](#general-linux-requirements)
-  - [SUSE Linux Enterprise Server (SLES) / openSUSE](#suse-linux-enterprise-server-sles-opensuse)
-[Using Upstream Docker](#using-upstream-docker)
-    - [Using SUSE/openSUSE packaged Docker](#using-suse-opensuse-packaged-docker)
-[Adding the Software Repository for Docker](#adding-the-software-repository-for-docker)
-  - [openSUSE MicroOS/Kubic (Atomic)](#opensuse-microos-kubic-atomic)
-    - [openSUSE MicroOS](#opensuse-microos)
-    - [openSUSE Kubic](#opensuse-kubic)
-  - [Red Hat Enterprise Linux (RHEL) / Oracle Linux (OL) / CentOS](#red-hat-enterprise-linux-rhel-oracle-linux-ol-centos)
-    - [Using upstream Docker](#using-upstream-docker-1)
-    - [Using RHEL/CentOS packaged Docker](#using-rhel-centos-packaged-docker)
-  - [Red Hat Atomic](#red-hat-atomic)
-    - [OpenSSH version](#openssh-version)
-    - [Creating a Docker Group](#creating-a-docker-group)
-  - [Flatcar Container Linux](#flatcar-container-linux)
-- [Software](#software)
-  - [OpenSSH](#openssh)
-  - [Kubernetes](#kubernetes)
-  - [Docker](#docker)
-  - [Installing Docker](#installing-docker)
-  - [Checking the Installed Docker Version](#checking-the-installed-docker-version)
-- [Hardware](#hardware)
-  - [Worker Role](#worker-role)
-  - [Large Kubernetes Clusters](#large-kubernetes-clusters)
-  - [Etcd clusters](#etcd-clusters)
-- [Ports](#ports)
-  - [Opening port TCP/6443 using `iptables`](#opening-port-tcp-6443-using-iptables)
-  - [Opening port TCP/6443 using `firewalld`](#opening-port-tcp-6443-using-firewalld)
-- [SSH Server Configuration](#ssh-server-configuration)
-
-<!-- /TOC -->
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Operating System
 
@@ -225,8 +193,8 @@ By default, Atomic hosts do not come with a Docker group. You can update the own
 
 When using Flatcar Container Linux nodes, it is required to use the following configuration in the cluster configuration file:
 
-{{% tabs %}}
-{{% tab "Canal"%}}
+<Tabs>
+<TabItem value="Canal">
 
 ```yaml
 rancher_kubernetes_engine_config:
@@ -241,9 +209,9 @@ rancher_kubernetes_engine_config:
       extra_args:
         flex-volume-plugin-dir: /opt/kubernetes/kubelet-plugins/volume/exec/
 ```
-{{% /tab %}}
+</TabItem>
 
-{{% tab "Calico"%}}
+<TabItem value="Calico">
 
 ```yaml
 rancher_kubernetes_engine_config:
@@ -258,8 +226,8 @@ rancher_kubernetes_engine_config:
       extra_args:
         flex-volume-plugin-dir: /opt/kubernetes/kubelet-plugins/volume/exec/
 ```
-{{% /tab %}}
-{{% /tabs %}}
+</TabItem>
+</Tabs>
 
 It is also required to enable the Docker service, you can enable the Docker service using the following command:
 

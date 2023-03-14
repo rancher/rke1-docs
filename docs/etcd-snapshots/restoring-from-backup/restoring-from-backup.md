@@ -3,12 +3,15 @@ title: Restoring from Backup
 weight: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 The details of restoring your cluster from backup are different depending on your version of RKE.
 
-{{% tabs %}}
-{{% tab "RKE v0.2.0+"%}}
+<Tabs>
+<TabItem value="RKE v0.2.0+">
 
-If there is a disaster with your Kubernetes cluster, you can use `rke etcd snapshot-restore` to recover your etcd. This command reverts etcd to a specific snapshot and should be run on an etcd node of the the specific cluster that has suffered the disaster. 
+If there is a disaster with your Kubernetes cluster, you can use `rke etcd snapshot-restore` to recover your etcd. This command reverts etcd to a specific snapshot and should be run on an etcd node of the the specific cluster that has suffered the disaster.
 
 The following actions will be performed when you run the command:
 
@@ -73,10 +76,10 @@ $ rke etcd snapshot-restore \
 | `--ssh-agent-auth`      |   [Use SSH Agent Auth defined by SSH_AUTH_SOCK](config-options/#ssh-agent) | |
 | `--ignore-docker-version`  | [Disable Docker version check](config-options/#supported-docker-versions) |
 
-{{% /tab %}}
-{{% tab "RKE before v0.2.0"%}}
+</TabItem>
+<TabItem value="RKE before v0.2.0">
 
-If there is a disaster with your Kubernetes cluster, you can use `rke etcd snapshot-restore` to recover your etcd. This command reverts etcd to a specific snapshot and should be run on an etcd node of the the specific cluster that has suffered the disaster. 
+If there is a disaster with your Kubernetes cluster, you can use `rke etcd snapshot-restore` to recover your etcd. This command reverts etcd to a specific snapshot and should be run on an etcd node of the the specific cluster that has suffered the disaster.
 
 The following actions will be performed when you run the command:
 
@@ -115,5 +118,5 @@ The `pki.bundle.tar.gz` file is also expected to be in the same location.
 | `--ssh-agent-auth`      |   [Use SSH Agent Auth defined by SSH_AUTH_SOCK](config-options/#ssh-agent) |
 | `--ignore-docker-version`  | [Disable Docker version check](config-options/#supported-docker-versions) |
 
-{{% /tab %}}
-{{% /tabs %}}
+</TabItem>
+</Tabs>

@@ -3,10 +3,13 @@ title: Example Scenarios
 weight: 4
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 These example scenarios for backup and restore are different based on your version of RKE.
 
-{{% tabs %}}
-{{% tab "RKE v0.2.0+" %}}
+<Tabs>
+<TabItem value="RKE v0.2.0+">
 
 This walkthrough will demonstrate how to restore an etcd cluster from a local snapshot with the following steps:
 
@@ -92,15 +95,15 @@ If you want to directly retrieve the snapshot from S3, add in the [S3 options](#
 The `rke etcd snapshot-restore` command triggers `rke up` using the new `cluster.yml`. Confirm that your Kubernetes cluster is functional by checking the pods on your cluster.
 
 ```
-> kubectl get pods                                                    
+> kubectl get pods
 NAME                     READY     STATUS    RESTARTS   AGE
 nginx-65899c769f-kcdpr   1/1       Running   0          17s
 nginx-65899c769f-pc45c   1/1       Running   0          17s
 nginx-65899c769f-qkhml   1/1       Running   0          17s
 ```
 
-{{% /tab %}}
-{{% tab "RKE before v0.2.0" %}}
+</TabItem>
+<TabItem value="RKE before v0.2.0">
 
 This walkthrough will demonstrate how to restore an etcd cluster from a local snapshot with the following steps:
 
@@ -171,7 +174,7 @@ rke remove --config rancher-cluster.yml
 <a id="retrieve-the-backup-and-place-it-on-a-new-node-rke-before-v0.2.0"></a>
 ### 5. Retrieve the Backup and Place it On a New Node
 
-Before restoring etcd and running `rke up`, we need to retrieve the backup saved on S3 to a new node, e.g. `node3`. 
+Before restoring etcd and running `rke up`, we need to retrieve the backup saved on S3 to a new node, e.g. `node3`.
 
 ```
 # Make a Directory
@@ -238,12 +241,12 @@ $ rke up --config cluster.yml
 Confirm that your Kubernetes cluster is functional by checking the pods on your cluster.
 
 ```
-> kubectl get pods                                                    
+> kubectl get pods
 NAME                     READY     STATUS    RESTARTS   AGE
 nginx-65899c769f-kcdpr   1/1       Running   0          17s
 nginx-65899c769f-pc45c   1/1       Running   0          17s
 nginx-65899c769f-qkhml   1/1       Running   0          17s
 ```
 
-{{% /tab %}}
-{{% /tabs %}}
+</TabItem>
+</Tabs>

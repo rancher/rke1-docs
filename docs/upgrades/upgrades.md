@@ -3,6 +3,9 @@ title: Upgrades
 weight: 100
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 After RKE has deployed Kubernetes, you can upgrade the versions of the components in your Kubernetes cluster, the [definition of the Kubernetes services](config-options/services/) or the [add-ons](config-options/add-ons/).
 
 The default Kubernetes version for each RKE version can be found in the release notes accompanying [the RKE download](https://github.com/rancher/rke/releases/). RKE v1.x should be used.
@@ -22,20 +25,20 @@ In [this section,](upgrades/how-upgrades-work) you'll learn what happens when yo
 - Ensure that any `system_images` configuration is absent from the `cluster.yml`. The Kubernetes version should only be listed under the `system_images` directive if an [unsupported version](#using-an-unsupported-kubernetes-version) is being used. Refer to [Kubernetes version precedence](#kubernetes-version-precedence) for more information.
 - Ensure that the correct files to manage [Kubernetes cluster state](installation/#kubernetes-cluster-state) are present in the working directory. Refer to the tabs below for the required files, which differ based on the RKE version.
 
-{{% tabs %}}
-{{% tab "RKE v0.2.0+" %}}
+<Tabs>
+<TabItem value="RKE v0.2.0+">
 The `cluster.rkestate` file contains the current state of the cluster including the RKE configuration and the certificates.
 
 This file is created in the same directory that has the cluster configuration file `cluster.yml`.
 
 It is required to keep the `cluster.rkestate` file to perform any operation on the cluster through RKE, or when upgrading a cluster last managed via RKE v0.2.0 or later.
-{{% /tab %}}
-{{% tab "RKE before v0.2.0" %}}
+</TabItem>
+<TabItem value="RKE before v0.2.0">
 Ensure that the `kube_config_cluster.yml` file is present in the working directory.
 
 RKE saves the Kubernetes cluster state as a secret. When updating the state, RKE pulls the secret, updates or changes the state, and saves a new secret. The `kube_config_cluster.yml` file is required for upgrading a cluster last managed via RKE v0.1.x.
-{{% /tab %}}
-{{% /tabs %}}
+</TabItem>
+</Tabs>
 
 ### Upgrading Kubernetes
 

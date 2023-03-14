@@ -3,10 +3,13 @@ title: One-time Snapshots
 weight: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 One-time snapshots are handled differently depending on your version of RKE.
 
-{{% tabs %}}
-{{% tab "RKE v0.2.0+" %}}
+<Tabs>
+<TabItem value="RKE v0.2.0+">
 
 To save a snapshot of etcd from each etcd node in the cluster config file, run the `rke etcd snapshot-save` command.
 
@@ -19,7 +22,7 @@ The one-time snapshot can be uploaded to a S3 compatible backend by using the ad
 To create a local one-time snapshot, run:
 
 ```
-$ rke etcd snapshot-save --config cluster.yml --name snapshot-name   
+$ rke etcd snapshot-save --config cluster.yml --name snapshot-name
 ```
 
 **Result:** The snapshot is saved in `/opt/rke/etcd-snapshots`.
@@ -93,8 +96,8 @@ Below is an [example IAM policy](https://docs.aws.amazon.com/IAM/latest/UserGuid
 
 For details on giving an application access to S3, refer to the AWS documentation on [Using an IAM Role to Grant Permissions to Applications Running on Amazon EC2 Instances.](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html)
 
-{{% /tab %}}
-{{% tab "RKE before v0.2.0" %}}
+</TabItem>
+<TabItem value="RKE before v0.2.0">
 
 To save a snapshot of etcd from each etcd node in the cluster config file, run the `rke etcd snapshot-save` command.
 
@@ -105,7 +108,7 @@ RKE saves a backup of the certificates, i.e. a file named `pki.bundle.tar.gz`, i
 To create a local one-time snapshot, run:
 
 ```
-$ rke etcd snapshot-save --config cluster.yml --name snapshot-name   
+$ rke etcd snapshot-save --config cluster.yml --name snapshot-name
 ```
 
 **Result:** The snapshot is saved in `/opt/rke/etcd-snapshots`.
@@ -119,5 +122,5 @@ $ rke etcd snapshot-save --config cluster.yml --name snapshot-name
 | `--ssh-agent-auth`      |   [Use SSH Agent Auth defined by SSH_AUTH_SOCK](config-options/#ssh-agent) |
 | `--ignore-docker-version`  | [Disable Docker version check](config-options/#supported-docker-versions) |
 
-{{% /tab %}}
-{{% /tabs %}}
+</TabItem>
+</Tabs>

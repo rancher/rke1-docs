@@ -3,10 +3,13 @@ title: How Upgrades Work
 weight: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 In this section, you'll learn what happens when you edit or upgrade your RKE Kubernetes cluster. The below sections describe how each type of node is upgraded by default when a cluster is upgraded using `rke up`.
 
-{{% tabs %}}
-{{% tab "RKE v1.1.0+" %}}
+<Tabs>
+<TabItem value="RKE v1.1.0+">
 
 The following features are new in RKE v1.1.0:
 
@@ -50,7 +53,7 @@ When each node in a batch returns to a Ready state, the next batch of nodes begi
 
 RKE scans the cluster before starting the upgrade to find the powered down or unreachable hosts. The upgrade will stop if that number matches or exceeds the maximum number of unavailable nodes.
 
-RKE will cordon each node before upgrading it, and uncordon the node afterward. RKE can also be configured to [drain](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/) nodes before upgrading them. 
+RKE will cordon each node before upgrading it, and uncordon the node afterward. RKE can also be configured to [drain](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/) nodes before upgrading them.
 
 RKE will handle all worker node upgrades before upgrading any add-ons. As long as the maximum number of unavailable worker nodes is not reached, RKE will attempt to upgrade the [addons.](#upgrades-of-addons) For example, if a cluster has two worker nodes and one worker node fails, but the maximum unavailable worker nodes is greater than one, the addons will still be upgraded.
 
@@ -64,8 +67,8 @@ For more information on configuring the number of replicas for each addon, refer
 
 For an example showing how to configure the addons, refer to the [example cluster.yml.](upgrades/configuring-strategy/#example-cluster-yml)
 
-{{% /tab %}}
-{{% tab "RKE before v1.1.0" %}}
+</TabItem>
+<TabItem value="RKE before v1.1.0">
 
 When a cluster is upgraded with `rke up`, using the default options, the following process is used:
 
@@ -86,5 +89,5 @@ Worker nodes are upgraded simultaneously, in batches of either 50 or the total n
 
 When a worker node is upgraded, it restarts several Docker processes, including the `kubelet` and `kube-proxy`. When `kube-proxy` comes up, it flushes `iptables`. When this happens, pods on this node can’t be accessed, resulting in downtime for the applications.
 
-{{% /tab %}}
-{{% /tabs %}}
+</TabItem>
+</Tabs>
