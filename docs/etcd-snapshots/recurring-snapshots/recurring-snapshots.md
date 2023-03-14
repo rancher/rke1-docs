@@ -3,10 +3,13 @@ title: Recurring Snapshots
 weight: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Recurring snapshots are handled differently based on your version of RKE.
 
-{{% tabs %}}
-{{% tab "RKE v0.2.0+"%}}
+<Tabs>
+<TabItem value="RKE v0.2.0+">
 
 To schedule automatic recurring etcd snapshots, you can enable the `etcd-snapshot` service with [extra configuration options](#options-for-the-etcd-snapshot-service). `etcd-snapshot` runs in a service container alongside the `etcd` container. By default, the `etcd-snapshot` service takes a snapshot for every node that has the `etcd` role and stores them to local disk in `/opt/rke/etcd-snapshots`.
 
@@ -95,8 +98,8 @@ services:
           -----END CERTIFICATE-----
 ```
 
-{{% /tab %}}
-{{% tab "RKE before v0.2.0"%}}
+</TabItem>
+<TabItem value="RKE before v0.2.0">
 
 To schedule automatic recurring etcd snapshots, you can enable the `etcd-snapshot` service with [extra configuration options](#options-for-the-local-etcd-snapshot-service). `etcd-snapshot` runs in a service container alongside the `etcd` container. By default, the `etcd-snapshot` service takes a snapshot for every node that has the `etcd` role and stores them to local disk in `/opt/rke/etcd-snapshots`.
 
@@ -134,5 +137,5 @@ services:
       retention: 24h
 ```
 
-{{% /tab %}}
-{{% /tabs %}}
+</TabItem>
+</Tabs>

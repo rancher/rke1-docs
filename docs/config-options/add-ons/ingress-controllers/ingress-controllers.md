@@ -4,6 +4,9 @@ description: By default, RKE deploys the NGINX ingress controller. Learn how to 
 weight: 262
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ### Default Ingress
 
 By default, RKE deploys the NGINX ingress controller on all schedulable nodes.
@@ -106,14 +109,14 @@ ingress:
 
 ### Configuring network options
 
-{{% tabs %}}
-{{% tab "v1.3.x" %}}
+<Tabs>
+<TabItem value="v1.3.x">
 For Kubernetes v1.21 and up, the NGINX ingress controller no longer runs in `hostNetwork: true` but uses hostPorts for port `80` and port `443`. This was done so the admission webhook can be configured to be accessed using ClusterIP so it can only be reached inside the cluster. If you want to change the mode and/or the ports, see the options below.
-{{% /tab %}}
-{{% tab "v1.1.11 and up & v1.2.x" %}}
+</TabItem>
+<TabItem value="v1.1.11 and up & v1.2.x">
 By default, the nginx ingress controller is configured using `hostNetwork: true` on the default ports `80` and `443`. If you want to change the mode and/or the ports, see the options below.
-{{% /tab %}}
-{{% /tabs %}}
+</TabItem>
+</Tabs>
 
 Configure the nginx ingress controller using `hostPort` and override the default ports:
 
