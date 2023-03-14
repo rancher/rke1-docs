@@ -7,7 +7,7 @@ This section describes how to enable the vSphere cloud provider. You will need t
 
 The [vSphere Cloud Provider](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/) interacts with VMware infrastructure (vCenter or standalone ESXi server) to provision and manage storage for persistent volumes in a Kubernetes cluster.
 
-When provisioning Kubernetes using RKE CLI or using [RKE clusters]({{< baseurl >}}/rancher/v2.x/en/cluster-provisioning/rke-clusters/) in Rancher, the vSphere Cloud Provider can be enabled by configuring the `cloud_provider` directive in the cluster YAML file.
+When provisioning Kubernetes using RKE CLI or using [RKE clusters](https://ranchermanager.docs.rancher.com/pages-for-subheaders/launch-kubernetes-with-rancher) in Rancher, the vSphere Cloud Provider can be enabled by configuring the `cloud_provider` directive in the cluster YAML file.
 
 ### Related Links
 
