@@ -57,7 +57,11 @@ nodes:
 
 You can specify the list of roles that you want the node to be as part of the Kubernetes cluster. Three roles are supported: `controlplane`, `etcd` and `worker`. Node roles are not mutually exclusive. It's possible to assign any combination of roles to any node. It's also possible to change a node's role using the upgrade process.
 
-> **Note:** Before v0.1.8, workloads/pods might have run on any nodes with `worker` or `controlplane` roles, but as of v0.1.8, they will only be deployed to any `worker` nodes.
+:::note
+
+Before v0.1.8, workloads/pods might have run on any nodes with `worker` or `controlplane` roles, but as of v0.1.8, they will only be deployed to any `worker` nodes.
+
+:::
 
 ### etcd
 
@@ -95,7 +99,11 @@ The `internal_address` provides the ability to have nodes with multiple addresse
 
 The `hostname_override` is used to be able to provide a friendly name for RKE to use when registering the node in Kubernetes. This hostname doesn't need to be a routable address, but it must be a valid [Kubernetes resource name](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names). If the `hostname_override` isn't set, then the `address` directive is used when registering the node in Kubernetes.
 
-> **Note:** When [cloud providers](config-options/cloud-providers/) are configured, you may need to override the hostname in order to use the cloud provider correctly. There is an exception for the [AWS cloud provider](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws), where the `hostname_override` field will be explicitly ignored.
+:::note
+
+When [cloud providers](config-options/cloud-providers/) are configured, you may need to override the hostname in order to use the cloud provider correctly. There is an exception for the [AWS cloud provider](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws), where the `hostname_override` field will be explicitly ignored.
+
+:::
 
 ### SSH Port
 
@@ -109,7 +117,11 @@ For each node, you specify the `user` to be used when connecting to this node. T
 
 For each node, you specify the path, i.e. `ssh_key_path`, for the SSH private key to be used when connecting to this node. The default key path for each node is `~/.ssh/id_rsa`.
 
-> **Note:** If you have a private key that can be used across all nodes, you can set the [SSH key path at the cluster level](config-options/#cluster-level-ssh-key-path). The SSH key path set in each node will always take precedence.
+:::note
+
+If you have a private key that can be used across all nodes, you can set the [SSH key path at the cluster level](config-options/#cluster-level-ssh-key-path). The SSH key path set in each node will always take precedence.
+
+:::
 
 ### SSH Key
 

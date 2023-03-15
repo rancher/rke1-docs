@@ -20,13 +20,21 @@ After you've made changes to add/remove nodes, run `rke up` with the updated `cl
 
 You can add/remove only worker nodes, by running `rke up --update-only`. This will ignore everything else in the `cluster.yml` except for any worker nodes.
 
-> **Note:** When using `--update-only`, other actions that do not specifically relate to nodes may be deployed or updated, for example [addons](../config-options/add-ons/add-ons.md).
+:::note
+
+When using `--update-only`, other actions that do not specifically relate to nodes may be deployed or updated, for example [addons](../config-options/add-ons/add-ons.md).
+
+:::
 
 ### Removing Kubernetes Components from Nodes
 
 In order to remove the Kubernetes components from nodes, you use the `rke remove` command.
 
-> **Warning:** This command is irreversible and will destroy the Kubernetes cluster, including etcd snapshots on S3. If there is a disaster and your cluster is inaccessible, refer to the process for [restoring your cluster from a snapshot](etcd-snapshots/#etcd-disaster-recovery).
+:::danger
+
+This command is irreversible and will destroy the Kubernetes cluster, including etcd snapshots on S3. If there is a disaster and your cluster is inaccessible, refer to the process for [restoring your cluster from a snapshot](etcd-snapshots/#etcd-disaster-recovery).
+
+:::
 
 The `rke remove` command does the following to each node in the `cluster.yml`:
 
@@ -40,7 +48,11 @@ The `rke remove` command does the following to each node in the `cluster.yml`:
 
 The cluster's etcd snapshots are removed, including both local snapshots and snapshots that are stored on S3.
 
-> **Note:** Pods are not removed from the nodes. If the node is re-used, the pods will automatically be removed when the new Kubernetes cluster is created.
+:::note
+
+Pods are not removed from the nodes. If the node is re-used, the pods will automatically be removed when the new Kubernetes cluster is created.
+
+:::
 
 - Clean each host from the directories left by the services:
   - /etc/kubernetes/ssl

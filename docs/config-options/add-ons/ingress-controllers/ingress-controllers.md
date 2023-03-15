@@ -11,11 +11,19 @@ import TabItem from '@theme/TabItem';
 
 By default, RKE deploys the NGINX ingress controller on all schedulable nodes.
 
-> **Note:** As of v0.1.8, only workers are considered schedulable nodes, but before v0.1.8, worker and controlplane nodes were considered schedulable nodes.
+:::note
+
+As of v0.1.8, only workers are considered schedulable nodes, but before v0.1.8, worker and controlplane nodes were considered schedulable nodes.
+
+:::
 
 RKE will deploy the ingress controller as a DaemonSet with `hostNetwork: true`, so ports `80`, and `443` will be opened on each node where the controller is deployed.
 
-> **Note:** As of v1.1.11, the network options of the ingress controller are configurable. See [Configuring network options](#configuring-network-options).
+:::note
+
+As of v1.1.11, the network options of the ingress controller are configurable. See [Configuring network options](#configuring-network-options).
+
+:::
 
 The images used for ingress controller is under the [`system_images` directive](config-options/system-images/). For each Kubernetes version, there are default images associated with the ingress controller, but these can be overridden by changing the image tag in `system_images`.
 
@@ -105,7 +113,11 @@ ingress:
   default_backend: false
 ```
 
-> **What happens if the field is omitted?** The value of `default_backend` will default to `true`. This maintains behavior with older versions of `rke`. However, a future version of `rke` will change the default value to `false`.
+:::info What happens if the field is omitted?
+
+The value of `default_backend` will default to `true`. This maintains behavior with older versions of `rke`. However, a future version of `rke` will change the default value to `false`.
+
+:::
 
 ### Configuring network options
 
@@ -156,10 +168,12 @@ When configuring an ingress object with TLS termination, you must provide it wit
 
 Setting up a default certificate is especially helpful in environments where a wildcard certificate is used, as the certificate can be applied in multiple subdomains.
 
->**Prerequisites:**
->
->- Access to the `cluster.yml` used to create the cluster.
->- The PEM encoded certificate you will use as the default certificate.
+:::note Prerequisites
+
+- Access to the `cluster.yml` used to create the cluster.
+- The PEM encoded certificate you will use as the default certificate.
+
+:::
 
 1. Obtain or generate your certificate key pair in a PEM encoded form.
 

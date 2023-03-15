@@ -106,7 +106,11 @@ For RKE before v0.3.0, the service defaults are located [here](https://github.co
 
 [Services](config-options/services/) can be upgraded by changing any of the services arguments or `extra_args` and running `rke up` again with the updated configuration file.
 
-> **Note:** The following arguments, `service_cluster_ip_range` or `cluster_cidr`, cannot be changed as any changes to these arguments will result in a broken cluster. Currently, network pods are not automatically upgraded.
+:::note
+
+The following arguments, `service_cluster_ip_range` or `cluster_cidr`, cannot be changed as any changes to these arguments will result in a broken cluster. Currently, network pods are not automatically upgraded.
+
+:::
 
 ### Upgrading Nodes Manually
 

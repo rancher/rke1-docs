@@ -11,11 +11,15 @@ For more details on how kubeconfig and kubectl work together, see the [Kubernete
 
 When you deployed Kubernetes, a kubeconfig is automatically generated for your RKE cluster. This file is created and saved as `kube_config_cluster.yml`.
 
->**Note:** By default, kubectl checks `~/.kube/config` for a kubeconfig file, but you can use any directory you want using the `--kubeconfig` flag. For example:
->
->```
+:::note
+
+By default, kubectl checks `~/.kube/config` for a kubeconfig file, but you can use any directory you want using the `--kubeconfig` flag. For example:
+
+```
 kubectl --kubeconfig /custom/path/kube.config get pods
 ```
+
+:::
 
 Confirm that kubectl is working by checking the version of your Kubernetes cluster
 

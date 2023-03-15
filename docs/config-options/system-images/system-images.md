@@ -2,19 +2,23 @@
 title: System Images
 weight: 225
 ---
-When RKE is deploying Kubernetes, there are several images that are pulled. These images are used as Kubernetes system components as well as helping to deploy these system components.  
+When RKE is deploying Kubernetes, there are several images that are pulled. These images are used as Kubernetes system components as well as helping to deploy these system components.
 
 As of `v0.1.6`, the functionality of a couple of the system images were consolidated into a single `rancher/rke-tools` image to simplify and speed the deployment process.
 
 You can configure the [network plug-ins](config-options/add-ons/network-plugins/), [ingress controller](config-options/add-ons/ingress-controllers/) and [dns provider](config-options/add-ons/dns/) as well as the options for these add-ons separately in the `cluster.yml`.
 
-Below is an example of the list of system images used to deploy Kubernetes through RKE. The default versions of Kubernetes are tied to specific versions of system images. 
+Below is an example of the list of system images used to deploy Kubernetes through RKE. The default versions of Kubernetes are tied to specific versions of system images.
 
 - For RKE v0.2.x and below, the map of versions and the system image versions is located here: https://github.com/rancher/types/blob/release/v2.2/apis/management.cattle.io/v3/k8s_defaults.go
 
 - For RKE v0.3.0 and above, the map of versions and the system image versions is located here: https://github.com/rancher/kontainer-driver-metadata/blob/release-v2.7/rke/k8s_rke_system_images.go
 
-> **Note:** As versions of RKE are released, the tags on these images will no longer be up to date. This list is specific for `v1.10.3-rancher2`.
+:::note
+
+As versions of RKE are released, the tags on these images will no longer be up to date. This list is specific for `v1.10.3-rancher2`.
+
+:::
 
 ```yaml
 system_images:

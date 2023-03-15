@@ -87,7 +87,11 @@ $ port upgrade rke
 
 The Kubernetes cluster components are launched using Docker on a Linux distro. You can use any Linux you want, as long as you can install Docker on it.
 
-> For information on which Docker versions were tested with your version of RKE, refer to the [terms of service](https://rancher.com/support-maintenance-terms) for installing Rancher on RKE.
+:::tip
+
+For information on which Docker versions were tested with your version of RKE, refer to the [terms of service](https://rancher.com/support-maintenance-terms) for installing Rancher on RKE.
+
+:::
 
 Review the [OS requirements](/os) and configure each node appropriately.
 
@@ -151,12 +155,19 @@ INFO[0101] Finished building Kubernetes cluster successfully
 
 The last line should read `Finished building Kubernetes cluster successfully` to indicate that your cluster is ready to use. As part of the Kubernetes creation process, a `kubeconfig` file has been created and written at `kube_config_cluster.yml`, which can be used to start interacting with your Kubernetes cluster.
 
-> **Note:** If you have used a different file name from `cluster.yml`, then the kube config file will be named `kube_config_<FILE_NAME>.yml`.
+:::note
+
+If you have used a different file name from `cluster.yml`, then the kube config file will be named `kube_config_<FILE_NAME>.yml`.
+
+:::
 
 ## Save Your Files
 
-> **Important**
-> The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster.
+:::note Important
+
+The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster.
+
+:::
 
 Save a copy of the following files in a secure location:
 
@@ -164,7 +175,11 @@ Save a copy of the following files in a secure location:
 - `kube_config_cluster.yml`: The [Kubeconfig file](kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
 - `cluster.rkestate`: The [Kubernetes Cluster State file](#kubernetes-cluster-state), this file contains credentials for full access to the cluster.<br/><br/>_The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
 
-> **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
+:::note
+
+The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
+
+:::
 
 ### Kubernetes Cluster State
 

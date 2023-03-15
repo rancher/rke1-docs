@@ -18,7 +18,11 @@ RKE provides the following DNS providers that can be deployed as add-ons:
 
 CoreDNS was made the default in RKE v0.2.5 when using Kubernetes 1.14 and higher. If you are using an RKE version lower than v0.2.5, kube-dns will be deployed by default.
 
-> **Note:** If you switch from one DNS provider to another, the existing DNS provider will be removed before the new one is deployed.
+:::note
+
+If you switch from one DNS provider to another, the existing DNS provider will be removed before the new one is deployed.
+
+:::
 
 # Disabling Deployment of a DNS Provider
 
@@ -207,11 +211,13 @@ kubectl get deploy kube-dns-autoscaler -n kube-system -o jsonpath='{.spec.templa
 
 _Available as of v1.1.0_
 
-> **Note:** The option to enable NodeLocal DNS is available for:
->
-> * Kubernetes v1.15.11 and up
-> * Kubernetes v1.16.8 and up
-> * Kubernetes v1.17.4 and up
+:::note The option to enable NodeLocal DNS is available for:
+
+- Kubernetes v1.15.11 and up
+- Kubernetes v1.16.8 and up
+- Kubernetes v1.17.4 and up
+
+:::
 
 NodeLocal DNS is an additional component that can be deployed on each node to improve DNS performance. It is not a replacement for the `provider` parameter, you will still need to have one of the available DNS providers configured. See [Using NodeLocal DNSCache in Kubernetes clusters](https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/) for more information on how NodeLocal DNS works.
 
@@ -228,7 +234,11 @@ dns:
     ip_address: "169.254.20.10"
 ```
 
-> **Note:** When enabling NodeLocal DNS on an existing cluster, pods that are currently running will not be modified, the updated `/etc/resolv.conf` configuration will take effect only for pods started after enabling NodeLocal DNS.
+:::note
+
+When enabling NodeLocal DNS on an existing cluster, pods that are currently running will not be modified, the updated `/etc/resolv.conf` configuration will take effect only for pods started after enabling NodeLocal DNS.
+
+:::
 
 ### NodeLocal Priority Class Name
 
@@ -248,4 +258,8 @@ dns:
 
 By removing the `ip_address` value, NodeLocal DNS will be removed from the cluster.
 
-> **Warning:** When removing NodeLocal DNS, a disruption to DNS can be expected. The updated `/etc/resolv.conf` configuration will take effect only for pods that are started after removing NodeLocal DNS. In general pods using the default `dnsPolicy: ClusterFirst` will need to be re-deployed.
+:::caution
+
+When removing NodeLocal DNS, a disruption to DNS can be expected. The updated `/etc/resolv.conf` configuration will take effect only for pods that are started after removing NodeLocal DNS. In general pods using the default `dnsPolicy: ClusterFirst` will need to be re-deployed.
+
+:::
