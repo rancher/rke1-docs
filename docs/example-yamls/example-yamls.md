@@ -1,8 +1,5 @@
 ---
 title: Example Cluster.ymls
-weight: 300
-aliases:
-  - /rke/latest/en/config-options/example-yamls/
 ---
 
 There are lots of different [configuration options](config-options/) that can be set in the cluster configuration file for RKE. Here are some examples of files:

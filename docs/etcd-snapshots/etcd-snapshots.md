@@ -1,8 +1,5 @@
 ---
 title: Backups and Disaster Recovery
-weight: 150
-aliases:
-  - /rke/latest/en/installation/etcd-snapshots/
 ---
 
 _Available as of v0.1.7_

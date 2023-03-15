@@ -1,6 +1,5 @@
 ---
 title: Audit Log
-weight: 251
 ---
 
 Kubernetes auditing provides a security-relevant chronological set of records about a cluster. Kube-apiserver performs auditing. Each request on each stage of its execution generates an event, which is then pre-processed according to a certain policy and written to a backend. The policy determines what’s recorded and the backends persist the records.

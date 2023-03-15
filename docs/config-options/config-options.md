@@ -1,7 +1,6 @@
 ---
 title: Kubernetes Configuration Options
 description: There are a lot of different Kubernetes Configuration options you can choose from when setting up your cluster.yml for RKE
-weight: 200
 ---
 
 When setting up your `cluster.yml` for RKE, there are a lot of different options that can be configured to control the behavior of how RKE launches Kubernetes.

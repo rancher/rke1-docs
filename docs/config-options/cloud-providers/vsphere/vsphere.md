@@ -1,6 +1,5 @@
 ---
 title: vSphere Cloud Provider
-weight: 254
 ---
 
 This section describes how to enable the vSphere cloud provider. You will need to use the `cloud_provider` directive in the cluster YAML file.

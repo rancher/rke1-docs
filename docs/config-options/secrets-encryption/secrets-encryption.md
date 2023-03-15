@@ -1,6 +1,5 @@
 ---
 title: Encrypting Secret Data at Rest
-weight: 230
 ---
 
 As of version `v0.3.1` RKE adds the support for managing secret data encryption at rest, which is [supported by Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/#before-you-begin) since version `v1.13`.

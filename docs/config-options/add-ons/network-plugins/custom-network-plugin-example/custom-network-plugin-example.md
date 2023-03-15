@@ -1,6 +1,5 @@
 ---
 title: Custom Network Plug-in Example
-weight: 1
 ---
 
 The below example shows how to configure a custom network plug-in with an in-line add-on to the `cluster.yml`.
@@ -8,8 +7,8 @@ The below example shows how to configure a custom network plug-in with an in-lin
 First, to edit the network plug-ins, change the `network` section of the YAML from:
 
 ```
-network: 
-  options: 
+network:
+  options:
     flannel_backend_type: "vxlan"
   plugin: "canal"
 ```

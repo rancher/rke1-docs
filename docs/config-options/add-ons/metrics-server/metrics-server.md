@@ -1,6 +1,5 @@
 ---
 title: Metrics Server
-weight: 263
 ---
 
 By default, RKE deploys [Metrics Server](https://github.com/kubernetes-incubator/metrics-server) to provide metrics on resources in your cluster.

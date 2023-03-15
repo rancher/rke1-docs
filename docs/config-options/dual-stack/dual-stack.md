@@ -1,6 +1,5 @@
 ---
 title: Dual-stack
-weight: 255
 ---
 
 As of RKE `v1.3.0`, [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) networking support has been added, which allows allocating both IPv4 and IPv6 addresses to pods and services.

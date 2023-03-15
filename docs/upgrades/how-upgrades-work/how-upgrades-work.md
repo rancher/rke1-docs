@@ -1,6 +1,5 @@
 ---
 title: How Upgrades Work
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

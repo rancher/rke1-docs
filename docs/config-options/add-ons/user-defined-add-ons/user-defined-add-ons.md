@@ -1,6 +1,5 @@
 ---
 title: User-Defined Add-Ons
-weight: 263
 ---
 
 Besides the [network plug-in](config-options/add-ons/network-plugins) and [ingress controllers](config-options/add-ons/ingress-controllers/), you can define any add-on that you want deployed after the Kubernetes cluster is deployed.

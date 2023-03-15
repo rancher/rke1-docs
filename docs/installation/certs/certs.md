@@ -1,6 +1,5 @@
 ---
 title: Custom Certificates
-weight: 150
 ---
 
 _Available as of v0.2.0_
@@ -53,13 +52,13 @@ If you want to create and sign the certificates by a real Certificate Authority 
 2. Run `rke cert generate-csr` to generate certificates for the node(s) in the `cluster.yml`. By default, the CSRs and keys will be saved in `./cluster_certs`. To have them saved in a different directory, use `--cert-dir` to define what directory to have them saved in.
 
     ```
-    $ rke cert generate-csr     
+    $ rke cert generate-csr
     INFO[0000] Generating Kubernetes cluster CSR certificates
     INFO[0000] [certificates] Generating Kubernetes API server csr
     INFO[0000] [certificates] Generating Kube Controller csr
     INFO[0000] [certificates] Generating Kube Scheduler csr
-    INFO[0000] [certificates] Generating Kube Proxy csr     
-    INFO[0001] [certificates] Generating Node csr and key   
+    INFO[0000] [certificates] Generating Kube Proxy csr
+    INFO[0001] [certificates] Generating Node csr and key
     INFO[0001] [certificates] Generating admin csr and kubeconfig
     INFO[0001] [certificates] Generating Kubernetes API server proxy client csr
     INFO[0001] [certificates] Generating etcd-x.x.x.x csr and key

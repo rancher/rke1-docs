@@ -1,6 +1,5 @@
 ---
 title: Rate Limiting
-weight: 241
 ---
 
 Using the `EventRateLimit` admission control enforces a limit on the number of events that the API Server will accept in a given time period. In a large multi-tenant cluster, there might be a small percentage of tenants that flood the server with event requests, which could have a significant impact on the performance of the cluster overall. Therefore, it is recommended to limit the rate of events that the API server will accept.

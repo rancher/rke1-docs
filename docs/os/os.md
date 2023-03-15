@@ -1,6 +1,5 @@
 ---
 title: Requirements
-weight: 5
 ---
 
 import Tabs from '@theme/Tabs';
