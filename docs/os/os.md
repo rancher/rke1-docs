@@ -18,7 +18,11 @@ RKE runs on almost any Linux OS with Docker installed. For details on which OS a
    usermod -aG docker <user_name>
    ```
 
-> **Note:** Users added to the `docker` group are granted effective root permissions on the host by means of the Docker API. Only choose a user that is intended for this purpose and has its credentials and access properly secured.
+:::note
+
+Users added to the `docker` group are granted effective root permissions on the host by means of the Docker API. Only choose a user that is intended for this purpose and has its credentials and access properly secured.
+
+:::
 
    See [Manage Docker as a non-root user](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user) to see how you can configure access to Docker without using the `root` user.
 
@@ -30,7 +34,11 @@ RKE runs on almost any Linux OS with Docker installed. For details on which OS a
   - Canal (Combination Calico and Flannel)
   - [Weave](https://www.weave.works/docs/net/latest/install/installing-weave/)
 
-> **Note:** If you or your cloud provider are using a custom minimal kernel, some required (network) kernel modules might not be present.
+:::note
+
+If you or your cloud provider are using a custom minimal kernel, some required (network) kernel modules might not be present.
+
+:::
 
 - Following sysctl settings must be applied
 
@@ -116,18 +124,23 @@ https://kubic.opensuse.org/blog/2021-02-08-MicroOS-Kubic-Rancher-RKE/
 
 If using Red Hat Enterprise Linux, Oracle Linux or CentOS, you cannot use the `root` user as [SSH user](config-options/nodes/#ssh-user) due to [Bugzilla 1527565](https://bugzilla.redhat.com/show_bug.cgi?id=1527565). Please follow the instructions below how to setup Docker correctly, based on the way you installed Docker on the node.
 
->**Note:** In RHEL 8.4, two extra services are included on the NetworkManager: `nm-cloud-setup.service` and `nm-cloud-setup.timer`. These services add a routing table that interferes with the CNI plugin's configuration. If these services are enabled, you must disable them using the command below, and then reboot the node to restore connectivity:
->
->  ```
-   systemctl disable nm-cloud-setup.service nm-cloud-setup.timer
-   reboot
-   ```
->
-> In addition, the default firewall settings of RHEL 8.4 prevent RKE1 pods from reaching out to Rancher to connect to the cluster agent. To allow Docker containers to reach out to the internet and connect to Rancher, make the following updates to the firewall settings:
-> ```
+:::note
+
+In RHEL 8.4, two extra services are included on the NetworkManager: `nm-cloud-setup.service` and `nm-cloud-setup.timer`. These services add a routing table that interferes with the CNI plugin's configuration. If these services are enabled, you must disable them using the command below, and then reboot the node to restore connectivity:
+
+```
+systemctl disable nm-cloud-setup.service nm-cloud-setup.timer
+reboot
+```
+
+In addition, the default firewall settings of RHEL 8.4 prevent RKE1 pods from reaching out to Rancher to connect to the cluster agent. To allow Docker containers to reach out to the internet and connect to Rancher, make the following updates to the firewall settings:
+
+```
   firewall-cmd --zone=public  --add-masquerade --permanent
   firewall-cmd --reload
-  ```
+```
+
+:::
 
 #### Using upstream Docker
 If you are using upstream Docker, the package name is `docker-ce` or `docker-ee`. You can check the installed package by executing:

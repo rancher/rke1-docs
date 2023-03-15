@@ -10,7 +10,11 @@ There are two ways that you can specify an add-on.
 - [In-line Add-ons](#in-line-add-ons)
 - [Referencing YAML Files for Add-ons](#referencing-yaml-files-for-add-ons)
 
-> **Note:** When using user-defined add-ons, you *must* define a namespace for *all* your resources, otherwise they will end up in the `kube-system` namespace.
+:::note
+
+When using user-defined add-ons, you *must* define a namespace for *all* your resources, otherwise they will end up in the `kube-system` namespace.
+
+:::
 
 RKE uploads the YAML manifest as a configmap to the Kubernetes cluster. Then, it runs a Kubernetes job that mounts the configmap and deploys the add-on using `kubectl apply -f`.
 
@@ -41,7 +45,7 @@ addons: |-
 ```
 
 ## Referencing YAML files for Add-ons
-Use the `addons_include` directive to reference a local file or a URL for any user-defined add-ons.  
+Use the `addons_include` directive to reference a local file or a URL for any user-defined add-ons.
 
 ```yaml
 addons_include:

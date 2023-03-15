@@ -6,9 +6,13 @@ weight: 230
 
 To deploy Kubernetes, RKE deploys several core components or services in Docker containers on the nodes. Based on the roles of the node, the containers deployed may be different.
 
->**Note:** All services support <b>additional custom arguments, Docker mount binds, and extra environment variables.</b>
->
->To configure advanced options for Kubernetes services such as `kubelet`, `kube-controller`, and `kube-apiserver` that are not documented below, see the [`extra_args` documentation](config-options/services/services-extras/) for more details.
+:::note
+
+All services support <b>additional custom arguments, Docker mount binds, and extra environment variables.</b>
+
+To configure advanced options for Kubernetes services such as `kubelet`, `kube-controller`, and `kube-apiserver` that are not documented below, see the [`extra_args` documentation](config-options/services/services-extras/) for more details.
+
+:::
 
 | Component               | Services key name in cluster.yml |
 |-------------------------|----------------------------------|
@@ -31,7 +35,11 @@ By default, RKE will deploy a new etcd service, but you can also run Kubernetes 
 
 ## Kubernetes API Server
 
-> **Note for Rancher 2 users** If you are configuring Cluster Options using a [Config File](https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#rke-cluster-config-file-reference) when creating [Rancher Launched Kubernetes](https://ranchermanager.docs.rancher.com/pages-for-subheaders/launch-kubernetes-with-rancher), the names of services should contain underscores only: `kube_api`. This only applies to Rancher v2.0.5 and v2.0.6.
+:::note Note for Rancher 2 users
+
+If you are configuring Cluster Options using a [Config File](https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#rke-cluster-config-file-reference) when creating [Rancher Launched Kubernetes](https://ranchermanager.docs.rancher.com/pages-for-subheaders/launch-kubernetes-with-rancher), the names of services should contain underscores only: `kube_api`. This only applies to Rancher v2.0.5 and v2.0.6.
+
+:::
 
 The [Kubernetes API](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/) REST service, which handles requests and data for all Kubernetes objects and provide shared state for all the other Kubernetes components.
 
@@ -63,7 +71,11 @@ RKE supports the following options for the `kube-api` service :
 - **Secrets Encryption Config** (`secrets_encryption_config`) - Manage Kubernetes at-rest data encryption. Documented [here](../secrets-encryption/secrets-encryption.md)
 ## Kubernetes Controller Manager
 
-> **Note for Rancher 2 users** If you are configuring Cluster Options using a [Config File](https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#rke-cluster-config-file-reference) when creating [Rancher Launched Kubernetes](https://ranchermanager.docs.rancher.com/pages-for-subheaders/launch-kubernetes-with-rancher), the names of services should contain underscores only: `kube_controller`. This only applies to Rancher v2.0.5 and v2.0.6.
+:::note Note for Rancher 2 users
+
+If you are configuring Cluster Options using a [Config File](https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#rke-cluster-config-file-reference) when creating [Rancher Launched Kubernetes](https://ranchermanager.docs.rancher.com/pages-for-subheaders/launch-kubernetes-with-rancher), the names of services should contain underscores only: `kube_controller`. This only applies to Rancher v2.0.5 and v2.0.6.
+
+:::
 
 The [Kubernetes Controller Manager](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/) service is the component responsible for running Kubernetes main control loops. The controller manager monitors the cluster desired state through the Kubernetes API server and makes the necessary changes to the current state to reach the desired state.
 

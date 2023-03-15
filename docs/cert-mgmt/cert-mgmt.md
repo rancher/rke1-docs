@@ -5,7 +5,11 @@ weight: 150
 
 _Available as of v0.2.0_
 
-> **Note:** This is not "TLS Certificates management in Kubernetes". Refer the [Kubernetes documentation](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/) and RKE [cluster.yaml example](example-yamls/) for more details.
+:::note
+
+ This is not "TLS Certificates management in Kubernetes". Refer the [Kubernetes documentation](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/) and RKE [cluster.yaml example](example-yamls/) for more details.
+
+:::
 
 Certificates are an important part of Kubernetes clusters and are used for all Kubernetes cluster components. RKE has a `rke cert` command to help work with certificates.
 
@@ -46,13 +50,13 @@ To rotate the service certificates for all the Kubernetes services, run the foll
 
 ```
 $ rke cert rotate
-INFO[0000] Initiating Kubernetes cluster                
-INFO[0000] Rotating Kubernetes cluster certificates     
+INFO[0000] Initiating Kubernetes cluster
+INFO[0000] Rotating Kubernetes cluster certificates
 INFO[0000] [certificates] Generating Kubernetes API server certificates
 INFO[0000] [certificates] Generating Kube Controller certificates
 INFO[0000] [certificates] Generating Kube Scheduler certificates
 INFO[0001] [certificates] Generating Kube Proxy certificates
-INFO[0001] [certificates] Generating Node certificate   
+INFO[0001] [certificates] Generating Node certificate
 INFO[0001] [certificates] Generating admin certificates and kubeconfig
 INFO[0001] [certificates] Generating Kubernetes API server proxy client certificates
 INFO[0001] [certificates] Generating etcd-xxxxx certificate and key
@@ -72,9 +76,9 @@ Example of rotating the certificate for only the `kubelet`:
 
 ```
 $ rke cert rotate --service kubelet
-INFO[0000] Initiating Kubernetes cluster                
-INFO[0000] Rotating Kubernetes cluster certificates     
-INFO[0000] [certificates] Generating Node certificate   
+INFO[0000] Initiating Kubernetes cluster
+INFO[0000] Rotating Kubernetes cluster certificates
+INFO[0000] [certificates] Generating Node certificate
 INFO[0000] Successfully Deployed state file at [./cluster.rkestate]
 INFO[0000] Rebuilding Kubernetes cluster with rotated certificates
 .....
@@ -92,16 +96,16 @@ Rotating the CA certificate will result in restarting other system pods, that wi
 - KubeDNS pods
 
 ```
-$ rke cert rotate --rotate-ca      
-INFO[0000] Initiating Kubernetes cluster                
-INFO[0000] Rotating Kubernetes cluster certificates     
+$ rke cert rotate --rotate-ca
+INFO[0000] Initiating Kubernetes cluster
+INFO[0000] Rotating Kubernetes cluster certificates
 INFO[0000] [certificates] Generating CA kubernetes certificates
 INFO[0000] [certificates] Generating Kubernetes API server aggregation layer requestheader client CA certificates
 INFO[0000] [certificates] Generating Kubernetes API server certificates
 INFO[0000] [certificates] Generating Kube Controller certificates
 INFO[0000] [certificates] Generating Kube Scheduler certificates
 INFO[0000] [certificates] Generating Kube Proxy certificates
-INFO[0000] [certificates] Generating Node certificate   
+INFO[0000] [certificates] Generating Node certificate
 INFO[0001] [certificates] Generating admin certificates and kubeconfig
 INFO[0001] [certificates] Generating Kubernetes API server proxy client certificates
 INFO[0001] [certificates] Generating etcd-xxxxx certificate and key

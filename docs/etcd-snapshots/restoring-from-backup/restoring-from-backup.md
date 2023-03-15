@@ -22,7 +22,11 @@ The following actions will be performed when you run the command:
 - Creates a new cluster by running `rke up`.
 - Restarts cluster system pods.
 
->**Warning:** You should back up any important data in your cluster before running `rke etcd snapshot-restore` because the command deletes your current Kubernetes cluster and replaces it with a new one.
+:::danger
+
+You should back up any important data in your cluster before running `rke etcd snapshot-restore` because the command deletes your current Kubernetes cluster and replaces it with a new one.
+
+:::
 
 The snapshot used to restore your etcd cluster can either be stored locally in `/opt/rke/etcd-snapshots` or from a S3 compatible backend.
 
@@ -93,7 +97,11 @@ Before you run this command, you must:
 
 After the restore, you must rebuild your Kubernetes cluster with `rke up`.
 
->**Warning:** You should back up any important data in your cluster before running `rke etcd snapshot-restore` because the command deletes your current etcd cluster and replaces it with a new one.
+:::danger
+
+You should back up any important data in your cluster before running `rke etcd snapshot-restore` because the command deletes your current etcd cluster and replaces it with a new one.
+
+:::
 
 ### Example of Restoring from a Local Snapshot
 

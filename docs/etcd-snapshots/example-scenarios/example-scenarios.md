@@ -76,7 +76,11 @@ nodes:
 
 ###  4. Restore etcd on the New Node from the Backup
 
-> **Prerequisite:** If the snapshot was created using RKE v1.1.4 or higher, the cluster state file should be included in the snapshot. The cluster state file will be automatically extracted and used for the restore. If the snapshot was created using RKE v1.1.3 or lower, please ensure your `cluster.rkestate` is present before starting the restore, because this contains your certificate data for the cluster.
+:::note Prerequisite
+
+If the snapshot was created using RKE v1.1.4 or higher, the cluster state file should be included in the snapshot. The cluster state file will be automatically extracted and used for the restore. If the snapshot was created using RKE v1.1.3 or lower, please ensure your `cluster.rkestate` is present before starting the restore, because this contains your certificate data for the cluster.
+
+:::
 
 After the new node is added to the `cluster.yml`, run the `rke etcd snapshot-restore` to launch `etcd` from the backup:
 
@@ -88,7 +92,11 @@ The snapshot is expected to be saved at `/opt/rke/etcd-snapshots`.
 
 If you want to directly retrieve the snapshot from S3, add in the [S3 options](#options-for-rke-etcd-snapshot-restore).
 
-> **Note:** As of v0.2.0, the file `pki.bundle.tar.gz` is no longer required for the restore process because the certificates required to restore are preserved within the `cluster.rkestate`.
+:::note
+
+As of v0.2.0, the file `pki.bundle.tar.gz` is no longer required for the restore process because the certificates required to restore are preserved within the `cluster.rkestate`.
+
+:::
 
 ### 5. Confirm that Cluster Operations are Restored
 
@@ -191,7 +199,11 @@ root@node3:~# s3cmd get \
   /opt/rke/etcd-snapshots/pki.bundle.tar.gz
 ```
 
-> **Note:** If you had multiple etcd nodes, you would have to manually sync the snapshot and `pki.bundle.tar.gz` across all of the etcd nodes in the cluster.
+:::note
+
+If you had multiple etcd nodes, you would have to manually sync the snapshot and `pki.bundle.tar.gz` across all of the etcd nodes in the cluster.
+
+:::
 
 <a id="add-a-new-etcd-node-to-the-kubernetes-cluster-rke-before-v0.2.0"></a>
 ###  6. Add a New etcd Node to the Kubernetes Cluster

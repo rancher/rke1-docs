@@ -5,7 +5,11 @@ weight: 232
 
 By default, RKE will launch etcd servers, but RKE also supports being able to use an external etcd. RKE only supports connecting to a TLS enabled etcd setup.
 
-> **Note:** RKE will not accept having external etcd servers in conjunction with [nodes](config-options/nodes/) with the `etcd` role.
+:::note
+
+RKE will not accept having external etcd servers in conjunction with [nodes](config-options/nodes/) with the `etcd` role.
+
+:::
 
 ```yaml
 services:

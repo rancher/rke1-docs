@@ -9,7 +9,11 @@ The vSphere cloud provider must be enabled to allow dynamic provisioning of volu
 
 For more details on deploying a Kubernetes cluster on vSphere, refer to the [official cloud provider documentation.](https://cloud-provider-vsphere.sigs.k8s.io/tutorials/kubernetes-on-vsphere-with-kubeadm.html)
 
->  **Note:** This documentation reflects the new vSphere Cloud Provider configuration schema introduced in Kubernetes v1.9 which differs from previous versions.
+:::note
+
+This documentation reflects the new vSphere Cloud Provider configuration schema introduced in Kubernetes v1.9 which differs from previous versions.
+
+:::
 
 # vSphere Configuration Example
 
@@ -84,7 +88,11 @@ Each vCenter is defined by adding a new entry under the `virtual_center` directi
 | datacenters            | string	  |   *       | Comma-separated list of all datacenters in which cluster nodes are running in. |
 | soap-roundtrip-count   | uint     |           | Round tripper count for API requests to the vCenter (num retries = value - 1). |
 
-> The following additional options (introduced in Kubernetes v1.11) are not yet supported in RKE.
+:::note
+
+The following additional options (introduced in Kubernetes v1.11) are not yet supported in RKE.
+
+:::
 
 | virtual_center Options |  Type    | Required  | Description |
 |:----------------------:|:--------:|:---------:|:-------|
