@@ -1,6 +1,5 @@
 ---
 title: Kubeconfig File
-weight: 145
 ---
 
 In order to start interacting with your Kubernetes cluster, you will use a different binary called `kubectl`. You will need to [install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on your local machine.

@@ -1,7 +1,6 @@
 ---
 title: Default Kubernetes Services
 description: To deploy Kubernetes, RKE deploys several default Kubernetes services. Read about etcd, kube-api server, kubelet, kube-proxy and more
-weight: 230
 ---
 
 To deploy Kubernetes, RKE deploys several core components or services in Docker containers on the nodes. Based on the roles of the node, the containers deployed may be different.

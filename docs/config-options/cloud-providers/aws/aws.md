@@ -1,6 +1,5 @@
 ---
 title: AWS Cloud Provider
-weight: 251
 ---
 
 To enable the AWS cloud provider, there are no RKE configuration options. You only need to set the name as `aws`. In order to use the AWS cloud provider, all cluster nodes must have already been configured with an [appropriate IAM role](#iam-requirements) and your AWS resources must be [tagged with a cluster ID](#tagging-aws-resources).
@@ -119,7 +118,7 @@ The AWS cloud provider uses tagging to discover and manage resources, the follow
 
 - **VPC**: The VPC used by the cluster
 - **Subnet**: The subnets used by the cluster
-- **EC2 instances**: All nodes launched for the cluster 
+- **EC2 instances**: All nodes launched for the cluster
 - **Security Groups**: The security group(s) used by nodes in the cluster
 
   >**Note:** If creating a `LoadBalancer` service and there is more than one security group attached to nodes, you must tag only one of the security groups as `owned` so that Kubernetes knows which group to add and remove rules. A single untagged security group is allowed, however, sharing this between clusters is not recommended.

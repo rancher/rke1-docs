@@ -1,6 +1,5 @@
 ---
 title: Azure Cloud Provider
-weight: 252
 ---
 
 To enable the Azure cloud provider, besides setting the name as `azure`, there are specific configuration options that must be set. Additionally, the Azure node name must also match the Kubernetes node name.

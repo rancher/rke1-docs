@@ -1,9 +1,5 @@
 ---
 title: SSH Connectivity Errors
-weight: 100
-aliases:
-- /rancher/v2.x/en/installation/ha/rke-add-on/troubleshooting/ssh-tunneling/
-
 ---
 
 ### Failed to set up SSH tunneling for host [xxx.xxx.xxx.xxx]: Can't retrieve Docker Info

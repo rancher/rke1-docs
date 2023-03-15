@@ -1,6 +1,5 @@
 ---
 title: Extra Args, Extra Binds, and Extra Environment Variables
-weight: 231
 ---
 
 RKE supports additional service arguments, volume binds and environment variables.
@@ -17,7 +16,7 @@ All service defaults and parameters are defined per [`kubernetes_version`](confi
 
 - For RKE v0.3.0+, the service defaults and parameters are defined per [`kubernetes_version`](config-options/#kubernetes-version). The service defaults are located [here](https://github.com/rancher/kontainer-driver-metadata/blob/master/rke/k8s_service_options.go). The default list of admissions plugins is the same for all Kubernetes versions and is located [here](https://github.com/rancher/kontainer-driver-metadata/blob/master/rke/k8s_service_options.go#L11).
 
-- For RKE before v0.3.0, the service defaults and admission plugins are defined per [`kubernetes_version`](config-options/#kubernetes-version) and located [here](https://github.com/rancher/types/blob/release/v2.2/apis/management.cattle.io/v3/k8s_defaults.go). 
+- For RKE before v0.3.0, the service defaults and admission plugins are defined per [`kubernetes_version`](config-options/#kubernetes-version) and located [here](https://github.com/rancher/types/blob/release/v2.2/apis/management.cattle.io/v3/k8s_defaults.go).
 
 ```yaml
 services:

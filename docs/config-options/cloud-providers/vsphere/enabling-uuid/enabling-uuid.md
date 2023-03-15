@@ -1,6 +1,5 @@
 ---
 title: Enabling Disk UUIDs for vSphere VMs
-weight: 2
 ---
 
 In order to provision nodes with RKE, all nodes must be configured with disk UUIDs. This is required so that attached VMDKs present a consistent UUID to the VM, allowing the disk to be mounted properly.

@@ -1,6 +1,5 @@
 ---
 title: Add-Ons
-weight: 260
 ---
 
 RKE supports configuring pluggable add-ons in the cluster YML. Add-ons are used to deploy several cluster components including:

@@ -1,6 +1,5 @@
 ---
 title: Configuring the Upgrade Strategy
-weight: 2
 ---
 
 In this section, you'll learn how to configure the maximum number of unavailable controlplane and worker nodes, how to drain nodes before upgrading them, and how to configure the replicas for addons such as Ingress.

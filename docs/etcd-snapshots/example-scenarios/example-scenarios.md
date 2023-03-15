@@ -1,6 +1,5 @@
 ---
 title: Example Scenarios
-weight: 4
 ---
 
 import Tabs from '@theme/Tabs';

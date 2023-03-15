@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting
-weight: 5
 ---
 
 As of **v0.1.9**, the **rke-bundle-cert** container is removed on both success and failure of a restore. To debug any issues, you will need to look at the **logs** generated from rke.

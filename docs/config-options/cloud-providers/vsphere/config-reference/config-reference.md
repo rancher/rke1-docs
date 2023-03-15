@@ -1,6 +1,5 @@
 ---
 title: vSphere Configuration Reference
-weight: 3
 ---
 
 This section shows an example of how to configure the vSphere cloud provider.

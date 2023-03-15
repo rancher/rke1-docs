@@ -1,7 +1,7 @@
 ---
 title: Maintaining Availability for Applications During Upgrades
-weight: 1
 ---
+
 _Available as of v1.1.0_
 
 In this section, you'll learn the requirements to prevent downtime for your applications when you upgrade the cluster using `rke up`.
@@ -20,7 +20,7 @@ To avoid downtime for your applications during an upgrade, you will need to conf
 
 ### 1. Kubernetes Version Requirement
 
-When upgrading to a newer Kubernetes version, the upgrade must be from a minor release to the next minor version, or to within the same patch release series. 
+When upgrading to a newer Kubernetes version, the upgrade must be from a minor release to the next minor version, or to within the same patch release series.
 
 ### 2. Cluster Requirements
 

@@ -1,6 +1,5 @@
 ---
 title: Restoring from Backup
-weight: 3
 ---
 
 import Tabs from '@theme/Tabs';

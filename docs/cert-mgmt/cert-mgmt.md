@@ -1,6 +1,5 @@
 ---
 title: Certificate Management
-weight: 150
 ---
 
 _Available as of v0.2.0_

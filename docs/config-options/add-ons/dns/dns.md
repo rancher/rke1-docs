@@ -1,6 +1,5 @@
 ---
 title: DNS providers
-weight: 262
 ---
 
 # Available DNS Providers

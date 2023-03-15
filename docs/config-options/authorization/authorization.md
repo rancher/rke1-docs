@@ -1,6 +1,5 @@
 ---
 title: Authorization
-weight: 240
 ---
 
 Kubernetes supports multiple [Authorization Modules](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#authorization-modules). Currently, RKE only supports the [RBAC module](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).

@@ -1,6 +1,5 @@
 ---
 title: Cloud Providers
-weight: 250
 ---
 
 RKE supports the ability to set your specific cloud provider for your Kubernetes cluster. There are specific cloud configurations for these cloud providers.

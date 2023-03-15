@@ -1,6 +1,5 @@
 ---
 title: One-time Snapshots
-weight: 1
 ---
 
 import Tabs from '@theme/Tabs';

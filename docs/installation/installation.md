@@ -1,7 +1,6 @@
 ---
 title: RKE Kubernetes Installation
 description: RKE is a fast, versatile Kubernetes installer you can use to install Kubernetes on your Linux hosts. Learn the simple steps for an RKE Kubernetes installation
-weight: 50
 ---
 
 RKE is a fast, versatile Kubernetes installer that you can use to install Kubernetes on your Linux hosts. You can get started in a couple of quick and easy steps

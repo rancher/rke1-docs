@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting vSphere Clusters
-weight: 4
 ---
 
 If you are experiencing issues while provisioning a cluster with enabled vSphere Cloud Provider or while creating vSphere volumes for your workloads, you should inspect the logs of the following K8s services:

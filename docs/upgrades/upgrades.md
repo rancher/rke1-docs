@@ -1,6 +1,5 @@
 ---
 title: Upgrades
-weight: 100
 ---
 
 import Tabs from '@theme/Tabs';
