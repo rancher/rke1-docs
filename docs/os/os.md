@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 ### General Linux Requirements
 
-RKE runs on almost any Linux OS with Docker installed. For details on which OS and Docker versions were tested with each version, refer to the [support maintenance terms.](https://rancher.com/support-maintenance-terms/).
+RKE runs on almost any Linux OS with Docker installed. For details on which OS and Docker versions were tested with each version, refer to the [support matrix](https://www.suse.com/suse-rke1/support-matrix/all-supported-versions/).
 
 - [SSH user](config-options/nodes/#ssh-user) - The SSH user used for node access must be a member of the `docker` group on the node:
 
