@@ -88,7 +88,7 @@ The Kubernetes cluster components are launched using Docker on a Linux distro. Y
 
 :::tip
 
-For information on which Docker versions were tested with your version of RKE, refer to the [terms of service](https://rancher.com/support-maintenance-terms) for installing Rancher on RKE.
+For information on which Docker versions were tested with your version of RKE, refer to the [support matrix](https://www.suse.com/suse-rke1/support-matrix/all-supported-versions/) for installing Rancher on RKE.
 
 :::
 
