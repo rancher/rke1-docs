@@ -92,20 +92,20 @@ For information on which Docker versions were tested with your version of RKE, r
 
 :::
 
-Review the [OS requirements](/os) and configure each node appropriately.
+Review the [OS requirements](../os/os.md) and configure each node appropriately.
 
 ## Creating the Cluster Configuration File
 
-RKE uses a cluster configuration file, referred to as `cluster.yml` to determine what nodes will be in the cluster and how to deploy Kubernetes. There are [many configuration options](/config-options) that can be set in the `cluster.yml`. In our example, we will be assuming the minimum of one [node](/config-options/nodes) for your Kubernetes cluster.
+RKE uses a cluster configuration file, referred to as `cluster.yml` to determine what nodes will be in the cluster and how to deploy Kubernetes. There are [many configuration options](../config-options/config-options.md) that can be set in the `cluster.yml`. In our example, we will be assuming the minimum of one [node](../config-options/nodes/nodes.md) for your Kubernetes cluster.
 
 There are two easy ways to create a `cluster.yml`:
 
-- Using our [minimal `cluster.yml`](/example-yamls/#minimal-cluster-yml-example) and updating it based on the node that you will be using.
+- Using our [minimal `cluster.yml`](../example-yamls/example-yamls.md#minimal-cluster-yml-example) and updating it based on the node that you will be using.
 - Using `rke config` to query for all the information needed.
 
 ### Using `rke config`
 
-Run `rke config` to create a new `cluster.yml` in the current directory. This command will prompt you for all the information needed to build a cluster. See [cluster configuration options](/config-options) for details on the various options.
+Run `rke config` to create a new `cluster.yml` in the current directory. This command will prompt you for all the information needed to build a cluster. See [cluster configuration options](../config-options/config-options.md) for details on the various options.
 
 ```
 rke config --name cluster.yml
@@ -135,7 +135,7 @@ To create an HA cluster, specify more than one host with role `controlplane`.
 
 _Available as of v0.2.0_
 
-By default, Kubernetes clusters require certificates and RKE auto-generates the certificates for all cluster components. You can also use [custom certificates](installation/certs). After the Kubernetes cluster is deployed, you can [manage these auto-generated certificates](/cert-mgmt#certificate-rotation).
+By default, Kubernetes clusters require certificates and RKE auto-generates the certificates for all cluster components. You can also use [custom certificates](installation/certs). After the Kubernetes cluster is deployed, you can [manage these auto-generated certificates](../cert-mgmt/cert-mgmt.md#certificate-rotation).
 
 ## Deploying Kubernetes with RKE
 
@@ -190,9 +190,9 @@ Before v0.2.0, RKE saved the Kubernetes cluster state as a secret. When updating
 
 ## Interacting with your Kubernetes cluster
 
-After your cluster is up and running, you can start using the [generated kubeconfig file](/kubeconfig) to start interacting with your Kubernetes cluster using `kubectl`.
+After your cluster is up and running, you can start using the [generated kubeconfig file](../kubeconfig/kubeconfig.md) to start interacting with your Kubernetes cluster using `kubectl`.
 
 After installation, there are several maintenance items that might arise:
 
-* [Certificate Management](/cert-mgmt)
-* [Adding and Removing Nodes in the cluster](/managing-clusters)
+* [Certificate Management](../cert-mgmt/cert-mgmt.md)
+* [Adding and Removing Nodes in the cluster](../managing-clusters/managing-clusters.md)
