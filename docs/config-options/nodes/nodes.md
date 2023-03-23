@@ -4,7 +4,7 @@ title: Nodes
 
 The `nodes` directive is the only required section in the `cluster.yml` file. It's used by RKE to specify cluster node(s), ssh credentials used to access the node(s) and which roles these nodes will be in the Kubernetes cluster.
 
-# Node Configuration Example
+## Node Configuration Example
 
 The following example shows node configuration in an example `cluster.yml`:
 
@@ -52,7 +52,7 @@ nodes:
         app: ingress
 ```
 
-# Kubernetes Roles
+## Kubernetes Roles
 
 You can specify the list of roles that you want the node to be as part of the Kubernetes cluster. Three roles are supported: `controlplane`, `etcd` and `worker`. Node roles are not mutually exclusive. It's possible to assign any combination of roles to any node. It's also possible to change a node's role using the upgrade process.
 
@@ -82,7 +82,7 @@ Taint Key                              | Taint Value  | Taint Effect
 
 With this role, any workloads or pods that are deployed will land on these nodes.
 
-# Node Options
+## Node Options
 
 Within each node, there are multiple directives that can be used.
 

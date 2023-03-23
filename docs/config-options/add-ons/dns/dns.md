@@ -2,7 +2,7 @@
 title: DNS providers
 ---
 
-# Available DNS Providers
+## Available DNS Providers
 
 RKE provides the following DNS providers that can be deployed as add-ons:
 
@@ -23,7 +23,7 @@ If you switch from one DNS provider to another, the existing DNS provider will b
 
 :::
 
-# Disabling Deployment of a DNS Provider
+## Disabling Deployment of a DNS Provider
 
 _Available as of v0.2.0_
 
@@ -34,7 +34,7 @@ dns:
   provider: none
 ```
 
-# CoreDNS
+## CoreDNS
 
 _Available as of v0.2.5_
 
@@ -119,7 +119,7 @@ kubectl -n kube-system get deploy coredns -o jsonpath='{.spec.template.spec.tole
 kubectl -n kube-system get deploy coredns-autoscaler -o jsonpath='{.spec.template.spec.tolerations}'
 ```
 
-# kube-dns
+## kube-dns
 
 RKE will deploy kube-dns as a Deployment with the default replica count of 1. The pod consists of 3 containers: `kubedns`, `dnsmasq` and `sidecar`. RKE will also deploy kube-dns-autoscaler as a Deployment, which will scale the kube-dns Deployment by using the number of cores and nodes. Please see [Linear Mode](https://github.com/kubernetes-incubator/cluster-proportional-autoscaler#linear-mode) for more information about this logic.
 
@@ -206,7 +206,7 @@ kubectl get deploy kube-dns-autoscaler -n kube-system -o jsonpath='{.spec.templa
 
 
 
-# NodeLocal DNS
+## NodeLocal DNS
 
 _Available as of v1.1.0_
 
