@@ -22,7 +22,7 @@ There are a few things worth noting:
 - [Add-on Placement](#add-on-placement)
 - [Tolerations](#tolerations)
 
-# Critical and Non-Critical Add-ons
+## Critical and Non-Critical Add-ons
 
 As of version v0.1.7, add-ons are split into two categories:
 
@@ -30,7 +30,7 @@ As of version v0.1.7, add-ons are split into two categories:
 
 - **Non-critical add-ons:** If these add-ons fail to deploy, RKE will only log a warning and continue deploying any other add-ons. [User-defined add-ons](config-options/add-ons/user-defined-add-ons/) are considered non-critical.
 
-# Add-on Deployment Jobs
+## Add-on Deployment Jobs
 
 RKE uses Kubernetes jobs to deploy add-ons. In some cases, add-ons deployment takes longer than expected. As of with version v0.1.7, RKE provides an option to control the job check timeout in seconds. This timeout is set at the cluster level.
 
@@ -38,7 +38,7 @@ RKE uses Kubernetes jobs to deploy add-ons. In some cases, add-ons deployment ta
 addon_job_timeout: 30
 ```
 
-# Add-on Placement
+## Add-on Placement
 
 _Applies to v0.2.3 and higher_
 
@@ -53,7 +53,7 @@ _Applies to v0.2.3 and higher_
 | nginx-ingress      | - `beta.kubernetes.io/os:NotIn:windows`<br/>- `node-role.kubernetes.io/worker` `Exists` | none | - `NoSchedule:Exists`<br/>- `NoExecute:Exists` |
 | metrics-server     | - `beta.kubernetes.io/os:NotIn:windows`<br/>- `node-role.kubernetes.io/worker` `Exists` | none | - `NoSchedule:Exists`<br/>- `NoExecute:Exists` |
 
-# Tolerations
+## Tolerations
 
 _Available as of v1.2.4_
 

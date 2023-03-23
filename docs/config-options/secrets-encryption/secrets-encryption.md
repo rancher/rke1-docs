@@ -40,7 +40,8 @@ services:
           - identity: {}
 
 ```
-# Managed At-Rest Data Encryption
+
+## Managed At-Rest Data Encryption
 
 Enabling and disabling at-rest data encryption in Kubernetes is a relatively complex process that requires several steps to be performed by the Kubernetes cluster administrator. The managed configuration aims to reduce this overhead and provides a simple abstraction layer to manage the process.
 
@@ -81,8 +82,8 @@ Once encryption is disabled in `cluster.yml`, RKE will perform the following [ac
 - Update `kube-apiserver` arguments to remove the encryption provider configuration and restart the `kube-apiserver`.
 - Remove the provider configuration file.
 
+## Key Rotation
 
-# Key Rotation
 Sometimes there is a need to rotate encryption config in your cluster. For example, the key is compromised. There are two ways to rotate the keys: with an RKE CLI command, or by disabling and re-enabling encryption in `cluster.yml`.
 
 ### Rotating Keys with the RKE CLI
@@ -114,7 +115,8 @@ This command will perform the following actions:
 
 For a cluster with encryption enabled, you can rotate the encryption keys by updating `cluster.yml`. If you disable and re-enable the data encryption in the `cluster.yml`, RKE will not reuse old keys. Instead, it will generate new keys every time, yielding the same result as a key rotation with the RKE CLI.
 
-# Custom At-Rest Data Encryption Configuration
+## Custom At-Rest Data Encryption Configuration
+
 With managed configuration, RKE provides the user with a very simple way to enable and disable encryption with minimal interaction and configuration. However, it doesn't allow for any customization to the configuration.
 
 With custom encryption configuration, RKE allows the user to provide their own configuration. Although RKE will help the user to deploy the configuration and rewrite the secrets if needed, it doesn't provide a configuration validation on user's behalf. It's the user responsibility to make sure their configuration is valid.

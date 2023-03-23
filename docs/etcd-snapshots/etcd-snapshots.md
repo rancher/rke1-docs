@@ -12,19 +12,19 @@ RKE can upload your snapshots to a S3 compatible backend.
 
 **Note:** As of RKE v0.2.0, the `pki.bundle.tar.gz` file is no longer required because of a change in how the [Kubernetes cluster state is stored](installation/#kubernetes-cluster-state).
 
-# Backing Up a Cluster
+## Backing Up a Cluster
 
 You can create [one-time snapshots](etcd-snapshots/one-time-snapshots) to back up your cluster, and you can also configure [recurring snapshots](etcd-snapshots/recurring-snapshots).
 
-# Restoring a Cluster from Backup
+## Restoring a Cluster from Backup
 
 You can use RKE to [restore your cluster from backup](etcd-snapshots/restoring-from-backup).
 
-# Example Scenarios
+## Example Scenarios
 
 These [example scenarios](etcd-snapshots/example-scenarios) for backup and restore are different based on your version of RKE.
 
-# How Snapshots Work
+## How Snapshots Work
 
 For each etcd node in the cluster, the etcd cluster health is checked. If the node reports that the etcd cluster is healthy, a snapshot is created from it and optionally uploaded to S3.
 

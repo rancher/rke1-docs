@@ -14,7 +14,7 @@ This documentation reflects the new vSphere Cloud Provider configuration schema 
 
 :::
 
-# vSphere Configuration Example
+## vSphere Configuration Example
 
 Given the following:
 
@@ -45,7 +45,8 @@ rancher_kubernetes_engine_config:
         resourcepool-path: /eu-west-1/host/hn1/resources/myresourcepool
 
 ```
-# Configuration Options
+
+## Configuration Options
 
 The vSphere configuration options are divided into 5 groups:
 
