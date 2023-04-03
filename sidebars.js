@@ -71,6 +71,7 @@ module.exports = {
         'config-options/secrets-encryption/secrets-encryption',
         'config-options/authentication/authentication',
         'config-options/authorization/authorization',
+        'config-options/services/pod-security-admission/pod-security-admission',
         'config-options/rate-limiting/rate-limiting',
         {
           type: 'category',
