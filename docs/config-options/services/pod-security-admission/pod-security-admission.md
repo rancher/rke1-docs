@@ -10,7 +10,7 @@ RKE provides three methods for configuring the Pod Security Admission controller
 
 To use the built-in PSA configuration, you can set the `services.kube-api.pod_security_configuration` field in the `cluster.yml` file. Valid values for `services.kube-api.pod_security_configuration` are either `restricted` or `privileged`.
 
-```
+```yaml
 services:
   kube-api:
     pod_security_configuration: <VALUE> # restricted or privileged
@@ -18,7 +18,7 @@ services:
 
 If set to `restricted`, the PodSecurityConfiguration section from the admission configuration file below is applied:
 
-```
+```yaml
 apiVersion: apiserver.config.k8s.io/v1
 kind: AdmissionConfiguration
 plugins:
@@ -42,7 +42,7 @@ plugins:
 
 If set to `privileged`, the PodSecurityConfiguration section from the admission configuration file below is applied:
 
-```
+```yaml
 apiVersion: apiserver.config.k8s.io/v1
 kind: AdmissionConfiguration
 plugins:
@@ -64,10 +64,10 @@ You can directly pass your customized admission configuration file in the `clust
 :::note
 
 [`pod-security.admission.config.k8s.io/v1`](https://kubernetes.io/docs/tasks/configure-pod-container/enforce-standards-admission-controller/) configuration requires Kubernetes v1.25 and above. For Kubernetes v1.23 and v1.24, use [v1beta1](https://v1-24.docs.kubernetes.io/docs/tasks/configure-pod-container/enforce-standards-admission-controller/) instead.
-```
 
 :::
 
+```yaml
 services:
   kube-api:
     admission_configuration:
@@ -97,7 +97,7 @@ If you want to use an external admission configuration file in the control plane
 
 :::
 
-```
+```yaml
 services:
   kube-api:
     extra_args:
