@@ -89,7 +89,7 @@ services:
 
 ## Method 3:  Using `extra_args` to pass customized admission configuration file
 
-If you want to use an external admission configuration file in the control plane node, you can use the `services.kube-api.extra_args` option to set the path to the file in the `kube-apiserver`.
+If you want to use an external admission configuration file in the control plane node, you can use the `services.kube-api.extra_args` option to set the path to the file and the `services.kube-api.extra_binds` option to mount the file in the `kube-apiserver`.
 
 :::note
 
@@ -102,4 +102,6 @@ services:
   kube-api:
     extra_args:
       admission-control-config-file: <PATH> # path to the file
+    extra_binds:
+      - "<PATH-IN-NODES>:<PATH-IN-CONTAINER>"
 ```
