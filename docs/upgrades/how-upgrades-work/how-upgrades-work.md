@@ -58,7 +58,7 @@ RKE will handle all worker node upgrades before upgrading any add-ons. As long a
 
 ### Upgrades of Addons
 
-The availability of your applications partly depends on the availability of [RKE addons.](config-options/add-ons/) Addons are used to deploy several cluster components, including network plug-ins, the Ingress controller, DNS provider, and metrics server.
+The availability of your applications partly depends on the availability of [RKE addons.](../../config-options/add-ons/add-ons.md) Addons are used to deploy several cluster components, including network plug-ins, the Ingress controller, DNS provider, and metrics server.
 
 Because RKE addons are necessary for allowing traffic into the cluster, they will need to be updated in batches to maintain availability. You will need to configure the maximum number of unavailable replicas for each addon in the `cluster.yml` to ensure that your cluster will retain enough available replicas during an upgrade.
 
