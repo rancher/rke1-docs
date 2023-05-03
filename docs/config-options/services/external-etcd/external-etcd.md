@@ -6,7 +6,7 @@ By default, RKE will launch etcd servers, but RKE also supports being able to us
 
 :::note
 
-RKE will not accept having external etcd servers in conjunction with [nodes](config-options/nodes/) with the `etcd` role.
+RKE will not accept having external etcd servers in conjunction with [nodes](../../nodes/nodes.md) with the `etcd` role.
 
 :::
 

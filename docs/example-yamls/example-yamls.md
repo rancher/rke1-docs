@@ -2,7 +2,7 @@
 title: Example Cluster.ymls
 ---
 
-There are lots of different [configuration options](config-options/) that can be set in the cluster configuration file for RKE. Here are some examples of files:
+There are lots of different [configuration options](../config-options/config-options.md) that can be set in the cluster configuration file for RKE. Here are some examples of files:
 
 :::note Note for Rancher 2 users
 

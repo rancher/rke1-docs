@@ -9,7 +9,7 @@ To deploy Kubernetes, RKE deploys several core components or services in Docker 
 
 All services support <b>additional custom arguments, Docker mount binds, and extra environment variables.</b>
 
-To configure advanced options for Kubernetes services such as `kubelet`, `kube-controller`, and `kube-apiserver` that are not documented below, see the [`extra_args` documentation](config-options/services/services-extras/) for more details.
+To configure advanced options for Kubernetes services such as `kubelet`, `kube-controller`, and `kube-apiserver` that are not documented below, see the [`extra_args` documentation](./services-extras/services-extras.md) for more details.
 
 :::
 
@@ -28,9 +28,9 @@ Kubernetes uses [etcd](https://etcd.io/) as a store for cluster state and data. 
 
 RKE supports running etcd in a single node mode or in HA cluster mode. It also supports adding and removing etcd nodes to the cluster.
 
-You can enable etcd to [take recurring snapshots](etcd-snapshots/#recurring-snapshots). These snapshots can be used to [restore etcd](etcd-snapshots/#etcd-disaster-recovery).
+You can enable etcd to [take recurring snapshots](../../etcd-snapshots/recurring-snapshots/recurring-snapshots.md). These snapshots can be used to [restore etcd](../../etcd-snapshots/restoring-from-backup/restoring-from-backup.md).
 
-By default, RKE will deploy a new etcd service, but you can also run Kubernetes with an [external etcd service](config-options/services/external-etcd/).
+By default, RKE will deploy a new etcd service, but you can also run Kubernetes with an [external etcd service](./external-etcd/external-etcd.md).
 
 ## Kubernetes API Server
 
@@ -130,7 +130,7 @@ If `hostname_override` is configured for one or more nodes in `cluster.yml`, ple
 
 An example of an error situation is an EC2 instance where the the public IP address is configured in `address`, and `hostname_override` is used, the connection between `kube-apiserver` and `kubelet` will fail because the `kubelet` will be contacted on the private IP address and the generated certificate will not be valid (the error `x509: certificate is valid for value_in_address, not private_ip` will be seen). The resolution is to provide the internal IP address in `internal_address`.
 
-For more information on host overrides, refer to the [node configuration page.](config-options/nodes/#overriding-the-hostname)
+For more information on host overrides, refer to the [node configuration page.](../nodes/nodes.md#overriding-the-hostname)
 
 ## Kubernetes Scheduler
 

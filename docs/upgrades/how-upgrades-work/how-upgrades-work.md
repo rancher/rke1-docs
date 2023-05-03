@@ -22,7 +22,7 @@ When a cluster is upgraded with `rke up`, using the default options, the followi
 1. Controlplane nodes get updated, one node at a time. This includes the controlplane components and worker plane components of the controlplane nodes.
 1. Worker plane components of etcd nodes get updated, one node at a time.
 1. Worker nodes get updated in batches of a configurable size. The default configuration for the maximum number of unavailable nodes is ten percent, rounded down to the nearest node, with a minimum batch size of one node.
-1. [Addons](config-options/add-ons/) get upgraded one by one.
+1. [Addons](../../config-options/add-ons/add-ons.md) get upgraded one by one.
 
 The following sections break down in more detail what happens when etcd nodes, controlplane nodes, worker nodes, and addons are upgraded. This information is intended to be used to help you understand the update strategy for the cluster, and may be useful when troubleshooting problems with upgrading the cluster.
 
@@ -62,9 +62,9 @@ The availability of your applications partly depends on the availability of [RKE
 
 Because RKE addons are necessary for allowing traffic into the cluster, they will need to be updated in batches to maintain availability. You will need to configure the maximum number of unavailable replicas for each addon in the `cluster.yml` to ensure that your cluster will retain enough available replicas during an upgrade.
 
-For more information on configuring the number of replicas for each addon, refer to [this section.](upgrades/configuring-strategy)
+For more information on configuring the number of replicas for each addon, refer to [this section.](../configuring-strategy/configuring-strategy.md)
 
-For an example showing how to configure the addons, refer to the [example cluster.yml.](upgrades/configuring-strategy/#example-cluster-yml)
+For an example showing how to configure the addons, refer to the [example cluster.yml.](../../example-yamls/example-yamls.md)
 
 </TabItem>
 <TabItem value="RKE before v1.1.0">
