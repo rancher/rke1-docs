@@ -203,7 +203,7 @@ The encryption configuration is stored in the cluster state file `cluster.rkesta
 - The snapshot is taken while encryption is enabled and restored when it's disabled. In this case, the encryption keys are no longer stored in the cluster state.
 - The snapshot is taken before the keys are rotated and restore is attempted after. In this case, the old keys used for encryption at the time of the snapshot no longer exist in the cluster state file.
 
-Therefore, we recommend that when you enable or disable encryption, or when you rotate keys, you should [create a snapshot](etcd-snapshots/one-time-snapshots/) so that your backup requires the same keys that you have access to.
+Therefore, we recommend that when you enable or disable encryption, or when you rotate keys, you should [create a snapshot](../../etcd-snapshots/one-time-snapshots/one-time-snapshots.md) so that your backup requires the same keys that you have access to.
 
 This also means you should not rotate the keys during the restore process, because you would lose the encryption keys in `cluster.rkestate`.
 

@@ -24,7 +24,7 @@ As of v1.1.11, the network options of the ingress controller are configurable. S
 
 :::
 
-The images used for ingress controller is under the [`system_images` directive](config-options/system-images/). For each Kubernetes version, there are default images associated with the ingress controller, but these can be overridden by changing the image tag in `system_images`.
+The images used for ingress controller is under the [`system_images` directive](../../system-images/system-images.md). For each Kubernetes version, there are default images associated with the ingress controller, but these can be overridden by changing the image tag in `system_images`.
 
 ### Scheduling Ingress Controllers
 

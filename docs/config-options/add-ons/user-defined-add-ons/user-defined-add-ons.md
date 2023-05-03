@@ -2,7 +2,7 @@
 title: User-Defined Add-Ons
 ---
 
-Besides the [network plug-in](config-options/add-ons/network-plugins) and [ingress controllers](config-options/add-ons/ingress-controllers/), you can define any add-on that you want deployed after the Kubernetes cluster is deployed.
+Besides the [network plug-in](../network-plugins/network-plugins.md) and [ingress controllers](../ingress-controllers/ingress-controllers.md), you can define any add-on that you want deployed after the Kubernetes cluster is deployed.
 
 There are two ways that you can specify an add-on.
 

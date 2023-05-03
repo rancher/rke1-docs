@@ -4,12 +4,12 @@ title: Add-Ons
 
 RKE supports configuring pluggable add-ons in the cluster YML. Add-ons are used to deploy several cluster components including:
 
-* [Network plug-ins](config-options/add-ons/network-plugins/)
-* [Ingress controller](config-options/add-ons/ingress-controllers/)
-* [DNS provider](config-options/add-ons/dns/)
-* [Metrics Server](config-options/add-ons/metrics-server/)
+* [Network plug-ins](./network-plugins/network-plugins.md)
+* [Ingress controller](./ingress-controllers/ingress-controllers.md)
+* [DNS provider](./dns/dns.md)
+* [Metrics Server](./metrics-server/metrics-server.md)
 
-These add-ons require images that can be found under the [`system_images` directive](config-options/system-images/). For each Kubernetes version, there are default images associated with each add-on, but these can be overridden by changing the image tag in `system_images`.
+These add-ons require images that can be found under the [`system_images` directive](../system-images/system-images.md). For each Kubernetes version, there are default images associated with each add-on, but these can be overridden by changing the image tag in `system_images`.
 
 There are a few things worth noting:
 
@@ -26,9 +26,9 @@ There are a few things worth noting:
 
 As of version v0.1.7, add-ons are split into two categories:
 
-- **Critical add-ons:** If these add-ons fail to deploy for any reason, RKE will error out. All system add-ons, such as the [network plug-in](config-options/add-ons/network-plugins/), KubeDNS, and [ingress controllers](config-options/add-ons/ingress-controllers/), are considered critical.
+- **Critical add-ons:** If these add-ons fail to deploy for any reason, RKE will error out. All system add-ons, such as the [network plug-in](./network-plugins/network-plugins.md), KubeDNS, and [ingress controllers](./ingress-controllers/ingress-controllers.md), are considered critical.
 
-- **Non-critical add-ons:** If these add-ons fail to deploy, RKE will only log a warning and continue deploying any other add-ons. [User-defined add-ons](config-options/add-ons/user-defined-add-ons/) are considered non-critical.
+- **Non-critical add-ons:** If these add-ons fail to deploy, RKE will only log a warning and continue deploying any other add-ons. [User-defined add-ons](./user-defined-add-ons/user-defined-add-ons.md) are considered non-critical.
 
 ## Add-on Deployment Jobs
 
