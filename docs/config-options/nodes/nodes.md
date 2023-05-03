@@ -92,7 +92,7 @@ The `address` directive will be used to set the hostname or IP address of the no
 
 ### Internal Address
 
-The `internal_address` provides the ability to have nodes with multiple addresses set a specific address to use for inter-host communication on a private network. If the `internal_address` is not set, the `address` is used for inter-host communication. The `internal_address` directive will set the address used for inter-host communication of the Kubernetes components, e.g. kube-apiserver and etcd. To change the interface used for the vxlan traffic of the Canal or Flannel network plug-ins please refer to the [Network Plug-ins Documentation](config-options/add-ons/network-plugins/).
+The `internal_address` provides the ability to have nodes with multiple addresses set a specific address to use for inter-host communication on a private network. If the `internal_address` is not set, the `address` is used for inter-host communication. The `internal_address` directive will set the address used for inter-host communication of the Kubernetes components, e.g. kube-apiserver and etcd. To change the interface used for the vxlan traffic of the Canal or Flannel network plug-ins please refer to the [Network Plug-ins Documentation](../add-ons/network-plugins/network-plugins.md).
 
 ### Overriding the Hostname
 
@@ -100,7 +100,7 @@ The `hostname_override` is used to be able to provide a friendly name for RKE to
 
 :::note
 
-When [cloud providers](config-options/cloud-providers/) are configured, you may need to override the hostname in order to use the cloud provider correctly. There is an exception for the [AWS cloud provider](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws), where the `hostname_override` field will be explicitly ignored.
+When [cloud providers](../cloud-providers/cloud-providers.md) are configured, you may need to override the hostname in order to use the cloud provider correctly. There is an exception for the [AWS cloud provider](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws), where the `hostname_override` field will be explicitly ignored.
 
 :::
 
@@ -118,7 +118,7 @@ For each node, you specify the path, i.e. `ssh_key_path`, for the SSH private ke
 
 :::note
 
-If you have a private key that can be used across all nodes, you can set the [SSH key path at the cluster level](config-options/#cluster-level-ssh-key-path). The SSH key path set in each node will always take precedence.
+If you have a private key that can be used across all nodes, you can set the [SSH key path at the cluster level](../config-options.md#cluster-level-ssh-key-path). The SSH key path set in each node will always take precedence.
 
 :::
 
@@ -140,7 +140,7 @@ If the Docker socket is different than the default, you can set the `docker_sock
 
 ### Labels
 
-You have the ability to add an arbitrary map of labels for each node. It can be used when using the [ingress controller's](config-options/add-ons/ingress-controllers/) `node_selector` option.
+You have the ability to add an arbitrary map of labels for each node. It can be used when using the [ingress controller's](../add-ons/ingress-controllers/ingress-controllers.md) `node_selector` option.
 
 ### Taints
 

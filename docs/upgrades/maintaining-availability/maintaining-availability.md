@@ -8,7 +8,7 @@ In this section, you'll learn the requirements to prevent downtime for your appl
 
 An upgrade without downtime is one in which your workloads are available on at least a single node, and all critical addon services, such as Ingress and DNS, are available during the upgrade.
 
-The way that clusters are upgraded changed in RKE v1.1.0. For details, refer to [How Upgrades Work.](upgrades/how-upgrades-work)
+The way that clusters are upgraded changed in RKE v1.1.0. For details, refer to [How Upgrades Work.](../how-upgrades-work/how-upgrades-work.md)
 
 This availability is achieved by upgrading worker nodes in batches of a configurable size, and ensuring that your workloads run on a number of nodes that exceeds that maximum number of unavailable worker nodes.
 
@@ -40,4 +40,4 @@ The following must be true of the cluster's applications:
 
 For information on how to use node selectors to assign pods to nodes, refer to the [official Kubernetes documentation.](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/)
 
-For information on configuring the number of replicas for each addon, refer to [this section.](upgrades/configuring-strategy/)
+For information on configuring the number of replicas for each addon, refer to [this section.](../configuring-strategy/configuring-strategy.md)

@@ -25,7 +25,7 @@ network:
   plugin: flannel
 ```
 
-The images used for network plug-ins are under the [`system_images` directive](config-options/system-images/). For each Kubernetes version, there are default images associated with each network plug-in, but these can be overridden by changing the image tag in `system_images`.
+The images used for network plug-ins are under the [`system_images` directive](../../system-images/system-images.md). For each Kubernetes version, there are default images associated with each network plug-in, but these can be overridden by changing the image tag in `system_images`.
 
 ## Disabling Deployment of a Network Plug-in
 
@@ -176,4 +176,4 @@ Weave encryption can be enabled by passing a string password to the network prov
 
 ## Custom Network Plug-ins
 
-It is possible to add a custom network plug-in by using the [user-defined add-on functionality](config-options/add-ons/user-defined-add-ons/) of RKE. In the `addons` field, you can add the add-on manifest of a cluster that has the network plugin-that you want, as shown in [this example.](config-options/add-ons/network-plugins/custom-network-plugin-example)
+It is possible to add a custom network plug-in by using the [user-defined add-on functionality](../user-defined-add-ons/user-defined-add-ons.md) of RKE. In the `addons` field, you can add the add-on manifest of a cluster that has the network plugin-that you want, as shown in [this example.](../network-plugins/custom-network-plugin-example/custom-network-plugin-example.md)

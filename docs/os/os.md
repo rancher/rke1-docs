@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 RKE runs on almost any Linux OS with Docker installed. For details on which OS and Docker versions were tested with each version, refer to the [support matrix](https://www.suse.com/suse-rke1/support-matrix/all-supported-versions/).
 
-- [SSH user](config-options/nodes/#ssh-user) - The SSH user used for node access must be a member of the `docker` group on the node:
+- [SSH user](../config-options/nodes/nodes.md#ssh-users) - The SSH user used for node access must be a member of the `docker` group on the node:
 
    ```
    usermod -aG docker <user_name>
@@ -121,7 +121,7 @@ https://kubic.opensuse.org/blog/2021-02-08-MicroOS-Kubic-Rancher-RKE/
 
 ### Red Hat Enterprise Linux (RHEL) / Oracle Linux (OL) / CentOS
 
-If using Red Hat Enterprise Linux, Oracle Linux or CentOS, you cannot use the `root` user as [SSH user](config-options/nodes/#ssh-user) due to [Bugzilla 1527565](https://bugzilla.redhat.com/show_bug.cgi?id=1527565). Please follow the instructions below how to setup Docker correctly, based on the way you installed Docker on the node.
+If using Red Hat Enterprise Linux, Oracle Linux or CentOS, you cannot use the `root` user as [SSH user](../config-options/nodes/nodes.md#ssh-users) due to [Bugzilla 1527565](https://bugzilla.redhat.com/show_bug.cgi?id=1527565). Please follow the instructions below how to setup Docker correctly, based on the way you installed Docker on the node.
 
 :::note
 

@@ -30,7 +30,7 @@ In this example, the Kubernetes cluster was deployed on two AWS nodes.
 
 Take a local snapshot of the Kubernetes cluster.
 
-You can upload this snapshot directly to an S3 backend with the [S3 options](etcd-snapshots/one-time-snapshots/#options-for-rke-etcd-snapshot-save).
+You can upload this snapshot directly to an S3 backend with the [S3 options](../one-time-snapshots/one-time-snapshots.md#options-for-rke-etcd-snapshot-save).
 
 ```
 $ rke etcd snapshot-save --name snapshot.db --config cluster.yml
@@ -89,7 +89,7 @@ $ rke etcd snapshot-restore --name snapshot.db --config cluster.yml
 
 The snapshot is expected to be saved at `/opt/rke/etcd-snapshots`.
 
-If you want to directly retrieve the snapshot from S3, add in the [S3 options](#options-for-rke-etcd-snapshot-restore).
+If you want to directly retrieve the snapshot from S3, add in the [S3 options](../restoring-from-backup/restoring-from-backup.md#options-for-rke-etcd-snapshot-restore).
 
 :::note
 
