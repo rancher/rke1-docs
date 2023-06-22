@@ -31,17 +31,15 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
-          docId: 'introduction',
-          position: 'right',
-          label: 'Docs',
-          className: 'navbar__docs',
-        },
-        {
           href: 'https://github.com/rancher/rke1-docs',
           label: 'GitHub',
           position: 'right',
-          className: 'navbar__github btn btn-secondary icon-github',
+          className: 'navbar__github',
+        },
+        {
+          href: 'https://www.rancher.com',
+          label: 'Rancher Home',
+          position: 'right',
         },
       ],
     },
