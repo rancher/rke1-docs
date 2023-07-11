@@ -290,8 +290,12 @@ For hardware recommendations for large Kubernetes clusters, refer to the officia
 For hardware recommendations for etcd clusters in production, refer to the official [etcd documentation](https://etcd.io/docs/v3.5/op-guide/hardware/).
 
 ## Ports
-{{< ports-rke-nodes >}}
-{{< requirements_ports_rke >}}
+import PortsRKENodes from '../shared-files/_ports-rke-nodes.md';
+import RequirementsPortsRKE from '../shared-files/_requirements_ports_rke.md';
+
+<PortsRKENodes />
+<RequirementsPortsRKE />
+
 
 If you are using an external firewall, make sure you have this port opened between the machine you are using to run `rke` and the nodes that you are going to use in the cluster.
 
