@@ -1,4 +1,4 @@
----
+16G16---
 title: vSphere Cloud Provider
 ---
 
@@ -13,7 +13,7 @@ When provisioning Kubernetes using RKE CLI or using [RKE clusters](https://ranch
 - **Configuration:** For details on vSphere configuration in RKE, refer to the [configuration reference.](./config-reference/config-reference.md)
 - **Troubleshooting:** For guidance on troubleshooting a cluster with the vSphere cloud provider enabled, refer to the [troubleshooting section.](./troubleshooting/troubleshooting.md)
 - **Storage:** If you are setting up storage, see the [official vSphere documentation on storage for Kubernetes,](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/) or the [official Kubernetes documentation on persistent volumes.](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) If you are using Rancher, refer to the [Rancher documentation on provisioning storage in vSphere.](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage#docusaurus_skipToContent_fallback)
-- **For Rancher users:** Refer to the Rancher documentation on [creating vSphere Kubernetes clusters](https://ranchermanager.docs.rancher.com/pages-for-subheaders/launch-kubernetes-with-ranchernode-pools/vsphere) and [provisioning storage.](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage#docusaurus_skipToContent_fallback)
+- **For Rancher users:** Refer to the Rancher documentation on [creating vSphere Kubernetes clusters](https://ranchermanager.docs.rancher.com/pages-for-subheaders/vsphere) and [provisioning storage.](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/provisioning-storage-examples/vsphere-storage#docusaurus_skipToContent_fallback)
 
 ## Prerequisites
 

@@ -5,7 +5,7 @@ title: Upgrades
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-After RKE has deployed Kubernetes, you can upgrade the versions of the components in your Kubernetes cluster, the [definition of the Kubernetes services](config-options/services/) or the [add-ons](config-options/add-ons/).
+After RKE has deployed Kubernetes, you can upgrade the versions of the components in your Kubernetes cluster, the [definition of the Kubernetes services](../config-options/services/services.md) or the [add-ons](../config-options/add-ons/add-ons.md).
 
 The default Kubernetes version for each RKE version can be found in the release notes accompanying [the RKE download](https://github.com/rancher/rke/releases/). RKE v1.x should be used.
 
@@ -17,12 +17,12 @@ In case the Kubernetes version is defined in the `kubernetes_version` directive 
 
 ### How Upgrades Work
 
-In [this section,](upgrades/how-upgrades-work) you'll learn what happens when you edit or upgrade your RKE Kubernetes cluster.
+In [this section,](./how-upgrades-work/how-upgrades-work.md) you'll learn what happens when you edit or upgrade your RKE Kubernetes cluster.
 
 ### Prerequisites
 
 - Ensure that any `system_images` configuration is absent from the `cluster.yml`. The Kubernetes version should only be listed under the `system_images` directive if an [unsupported version](#using-an-unsupported-kubernetes-version) is being used. Refer to [Kubernetes version precedence](#kubernetes-version-precedence) for more information.
-- Ensure that the correct files to manage [Kubernetes cluster state](installation/#kubernetes-cluster-state) are present in the working directory. Refer to the tabs below for the required files, which differ based on the RKE version.
+- Ensure that the correct files to manage [Kubernetes cluster state](../installation/installation.md#kubernetes-cluster-state) are present in the working directory. Refer to the tabs below for the required files, which differ based on the RKE version.
 
 <Tabs>
 <TabItem value="RKE v0.2.0+">
@@ -55,15 +55,15 @@ $ rke up --config cluster.yml
 
 ### Configuring the Upgrade Strategy
 
-As of v0.1.8, upgrades to add-ons are supported. [Add-ons](config-options/add-ons/) can also be upgraded by changing any of the add-ons and running `rke up` again with the updated configuration file.
+As of v0.1.8, upgrades to add-ons are supported. [Add-ons](../config-options/add-ons/add-ons.md) can also be upgraded by changing any of the add-ons and running `rke up` again with the updated configuration file.
 
 As of v1.1.0, additional upgrade options became available to give you more granular control over the upgrade process. These options can be used to maintain availability of your applications during a cluster upgrade.
 
-For details on upgrade configuration options, refer to [Configuring the Upgrade Strategy.](upgrades/configuring-strategy)
+For details on upgrade configuration options, refer to [Configuring the Upgrade Strategy.](./configuring-strategy/configuring-strategy.md)
 
 ### Maintaining Availability for Applications During Upgrades
 
-In [this section,](upgrades/maintaining-availability/) you'll learn the requirements to prevent downtime for your applications when you upgrade the cluster using `rke up`.
+In [this section,](./maintaining-availability/maintaining-availability.md) you'll learn the requirements to prevent downtime for your applications when you upgrade the cluster using `rke up`.
 
 ### Listing Supported Kubernetes Versions
 
@@ -91,7 +91,7 @@ As of v0.2.0, if a version is defined in `kubernetes_version` and is not found i
 
 Before v0.2.0, if a version is defined in `kubernetes_version` and is not found in the specific list of supported Kubernetes versions,  the default version from the supported list is used.
 
-If you want to use a different version from the supported list, please use the [system images](config-options/system-images/) option.
+If you want to use a different version from the supported list, please use the [system images](../config-options/system-images/system-images.md) option.
 
 ### Mapping the Kubernetes Version to Services
 
@@ -103,7 +103,7 @@ For RKE before v0.3.0, the service defaults are located [here](https://github.co
 
 ### Service Upgrades
 
-[Services](config-options/services/) can be upgraded by changing any of the services arguments or `extra_args` and running `rke up` again with the updated configuration file.
+[Services](../config-options/services/services.md) can be upgraded by changing any of the services arguments or `extra_args` and running `rke up` again with the updated configuration file.
 
 :::note
 

@@ -100,7 +100,7 @@ RKE uses a cluster configuration file, referred to as `cluster.yml` to determine
 
 There are two easy ways to create a `cluster.yml`:
 
-- Using our [minimal `cluster.yml`](../example-yamls/example-yamls.md#minimal-cluster-yml-example) and updating it based on the node that you will be using.
+- Using our [minimal `cluster.yml`](../example-yamls/example-yamls.md#minimal-clusteryml-example) and updating it based on the node that you will be using.
 - Using `rke config` to query for all the information needed.
 
 ### Using `rke config`
@@ -135,7 +135,7 @@ To create an HA cluster, specify more than one host with role `controlplane`.
 
 _Available as of v0.2.0_
 
-By default, Kubernetes clusters require certificates and RKE auto-generates the certificates for all cluster components. You can also use [custom certificates](installation/certs). After the Kubernetes cluster is deployed, you can [manage these auto-generated certificates](../cert-mgmt/cert-mgmt.md#certificate-rotation).
+By default, Kubernetes clusters require certificates and RKE auto-generates the certificates for all cluster components. You can also use [custom certificates](./certs/certs.md). After the Kubernetes cluster is deployed, you can [manage these auto-generated certificates](../cert-mgmt/cert-mgmt.md#certificate-rotation).
 
 ## Deploying Kubernetes with RKE
 
@@ -171,7 +171,7 @@ The files mentioned below are needed to maintain, troubleshoot and upgrade your 
 Save a copy of the following files in a secure location:
 
 - `cluster.yml`: The RKE cluster configuration file.
-- `kube_config_cluster.yml`: The [Kubeconfig file](kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
+- `kube_config_cluster.yml`: The [Kubeconfig file](../kubeconfig/kubeconfig.md) for the cluster, this file contains credentials for full access to the cluster.
 - `cluster.rkestate`: The [Kubernetes Cluster State file](#kubernetes-cluster-state), this file contains credentials for full access to the cluster.<br/><br/>_The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
 
 :::note

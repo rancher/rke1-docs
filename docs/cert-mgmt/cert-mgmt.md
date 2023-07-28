@@ -6,7 +6,7 @@ _Available as of v0.2.0_
 
 :::note
 
- This is not "TLS Certificates management in Kubernetes". Refer the [Kubernetes documentation](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/) and RKE [cluster.yaml example](example-yamls/) for more details.
+ This is not "TLS Certificates management in Kubernetes". Refer the [Kubernetes documentation](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/) and RKE [cluster.yaml example](../example-yamls/example-yamls.md) for more details.
 
 :::
 
@@ -17,9 +17,9 @@ Certificates are an important part of Kubernetes clusters and are used for all K
 
 ## Generating Certificate Signing Requests (CSRs) and Keys
 
-If you want to create and sign the certificates by a real Certificate Authority (CA), you can use RKE to [generate a set of Certificate Signing Requests (CSRs) and keys](installation/certs/#generating-certificate-signing-requests-csrs-and-keys).
+If you want to create and sign the certificates by a real Certificate Authority (CA), you can use RKE to [generate a set of Certificate Signing Requests (CSRs) and keys](../installation/certs/certs.md#generating-certificate-signing-requests-csrs-and-keys).
 
-You can use the CSRs and keys to sign the certificates by a real CA. After the certificates are signed, these custom certificates can be used by RKE to as [custom certificates](installation/certs/) for the Kubernetes cluster.
+You can use the CSRs and keys to sign the certificates by a real CA. After the certificates are signed, these custom certificates can be used by RKE to as [custom certificates](../installation/certs/certs.md) for the Kubernetes cluster.
 
 ## Certificate Rotation
 
@@ -29,7 +29,7 @@ After the certificates are rotated, the Kubernetes components are automatically 
 
 - etcd
 - kubelet (node certificate)
-- kubelet (serving certificate, if [enabled](config-options/services/#kubelet-options))
+- kubelet (serving certificate, if [enabled](../config-options/services/services.md#kubelet-options))
 - kube-apiserver
 - kube-proxy
 - kube-scheduler
