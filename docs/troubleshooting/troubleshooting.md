@@ -2,5 +2,5 @@
 title: Troubleshooting
 ---
 
-* [SSH Connectivity Errors](troubleshooting/ssh-connectivity-errors/)
-* [Provisioning Errors](troubleshooting/provisioning-errors/)
+* [SSH Connectivity Errors](./ssh-connectivity-errors/ssh-connectivity-errors.md)
+* [Provisioning Errors](./provisioning-errors/provisioning-errors.md)

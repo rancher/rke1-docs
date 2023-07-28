@@ -10,19 +10,19 @@ _Available as of v0.2.0_
 
 RKE can upload your snapshots to a S3 compatible backend.
 
-**Note:** As of RKE v0.2.0, the `pki.bundle.tar.gz` file is no longer required because of a change in how the [Kubernetes cluster state is stored](installation/#kubernetes-cluster-state).
+**Note:** As of RKE v0.2.0, the `pki.bundle.tar.gz` file is no longer required because of a change in how the [Kubernetes cluster state is stored](../installation/installation.md#kubernetes-cluster-state).
 
 ## Backing Up a Cluster
 
-You can create [one-time snapshots](etcd-snapshots/one-time-snapshots) to back up your cluster, and you can also configure [recurring snapshots](etcd-snapshots/recurring-snapshots).
+You can create [one-time snapshots](./one-time-snapshots/one-time-snapshots.md) to back up your cluster, and you can also configure [recurring snapshots](./recurring-snapshots/recurring-snapshots.md).
 
 ## Restoring a Cluster from Backup
 
-You can use RKE to [restore your cluster from backup](etcd-snapshots/restoring-from-backup).
+You can use RKE to [restore your cluster from backup](./restoring-from-backup/restoring-from-backup.md).
 
 ## Example Scenarios
 
-These [example scenarios](etcd-snapshots/example-scenarios) for backup and restore are different based on your version of RKE.
+These [example scenarios](./example-scenarios/example-scenarios.md) for backup and restore are different based on your version of RKE.
 
 ## How Snapshots Work
 
@@ -55,4 +55,4 @@ On restore, the following process is used:
 
 ## Troubleshooting
 
-If you have trouble restoring your cluster, you can refer to the [troubleshooting](etcd-snapshots/troubleshooting) page.
+If you have trouble restoring your cluster, you can refer to the [troubleshooting](./troubleshooting/troubleshooting.md) page.

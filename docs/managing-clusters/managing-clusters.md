@@ -5,7 +5,7 @@ description: RKE supports adding/removing nodes for worker and controlplane host
 
 ### Adding/Removing Nodes
 
-RKE supports adding/removing [nodes](config-options/nodes/) for worker and controlplane hosts.
+RKE supports adding/removing [nodes](../config-options/nodes/nodes.md) for worker and controlplane hosts.
 
 In order to add additional nodes, you update the original `cluster.yml` file with any additional nodes and specify their role in the Kubernetes cluster.
 
@@ -29,7 +29,7 @@ In order to remove the Kubernetes components from nodes, you use the `rke remove
 
 :::danger
 
-This command is irreversible and will destroy the Kubernetes cluster, including etcd snapshots on S3. If there is a disaster and your cluster is inaccessible, refer to the process for [restoring your cluster from a snapshot](etcd-snapshots/#etcd-disaster-recovery).
+This command is irreversible and will destroy the Kubernetes cluster, including etcd snapshots on S3. If there is a disaster and your cluster is inaccessible, refer to the process for [restoring your cluster from a snapshot](../etcd-snapshots/etcd-snapshots.md#restoring-a-cluster-from-backup).
 
 :::
 

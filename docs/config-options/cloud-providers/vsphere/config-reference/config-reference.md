@@ -19,7 +19,7 @@ This documentation reflects the new vSphere Cloud Provider configuration schema 
 Given the following:
 
 - VMs in the cluster are running in the same datacenter `eu-west-1` managed by the vCenter `vc.example.com`.
-- The vCenter has a user `provisioner` with password `secret` with the required roles assigned, see [Prerequisites](#prerequisites).
+- The vCenter has a user `provisioner` with password `secret` with the required roles assigned, see [Prerequisites](../vsphere.md#prerequisites).
 - The vCenter has a datastore named `ds-1` which should be used to store the VMDKs for volumes.
 - A `vm/kubernetes` folder exists in vCenter.
 

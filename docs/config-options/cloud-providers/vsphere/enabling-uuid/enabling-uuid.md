@@ -4,7 +4,7 @@ title: Enabling Disk UUIDs for vSphere VMs
 
 In order to provision nodes with RKE, all nodes must be configured with disk UUIDs. This is required so that attached VMDKs present a consistent UUID to the VM, allowing the disk to be mounted properly.
 
-Depending on whether you are provisioning the VMs using the [vSphere node driver](https://ranchermanager.docs.rancher.com/pages-for-subheaders/launch-kubernetes-with-ranchernode-pools/vsphere) in Rancher or using your own scripts or third-party tools, there are different methods available to enable disk UUIDs for VMs:
+Depending on whether you are provisioning the VMs using the [vSphere node driver](https://ranchermanager.docs.rancher.com/pages-for-subheaders/vsphere) in Rancher or using your own scripts or third-party tools, there are different methods available to enable disk UUIDs for VMs:
 
 - [Using the vSphere console](#using-the-vsphere-console)
 - [Using the GOVC CLI tool](#using-the-govc-cli-tool)

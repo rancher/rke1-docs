@@ -5,35 +5,35 @@ description: There are a lot of different Kubernetes Configuration options you c
 
 When setting up your `cluster.yml` for RKE, there are a lot of different options that can be configured to control the behavior of how RKE launches Kubernetes.
 
-There are several options that can be configured in cluster configuration option. There are several [example yamls](example-yamls/) that contain all the options.
+There are several options that can be configured in cluster configuration option. There are several [example yamls](../example-yamls/example-yamls.md) that contain all the options.
 
 ### Configuring Nodes
-* [Nodes](config-options/nodes/)
+* [Nodes](./nodes/nodes.md)
 * [Ignoring unsupported Docker versions](#supported-docker-versions)
-* [Private Registries](config-options/private-registries/)
+* [Private Registries](./private-registries/private-registries.md)
 * [Cluster Level SSH Key Path](#cluster-level-ssh-key-path)
 * [SSH Agent](#ssh-agent)
-* [Bastion Host](config-options/bastion-host/)
+* [Bastion Host](./bastion-host/bastion-host.md)
 
 ### Configuring Kubernetes Cluster
 * [Cluster Name](#cluster-name)
 * [Kubernetes Version](#kubernetes-version)
 * [Prefix Path](#prefix-path)
-* [System Images](config-options/system-images/)
-* [Services](config-options/services/)
-* [Extra Args and Binds and Environment Variables](config-options/services/services-extras/)
-* [External Etcd](config-options/services/external-etcd/)
-* [Authentication](config-options/authentication/)
-* [Authorization](config-options/authorization/)
-* [Rate Limiting](config-options/rate-limiting/)
-* [Cloud Providers](config-options/cloud-providers/)
-* [Audit Log](config-options/audit-log)
-* [Add-ons](config-options/add-ons/)
-  * [Network Plug-ins](config-options/add-ons/network-plugins/)
-  * [DNS providers](config-options/add-ons/dns/)
-  * [Ingress Controllers](config-options/add-ons/ingress-controllers/)
-  * [Metrics Server](config-options/add-ons/metrics-server/)
-  * [User-Defined Add-ons](config-options/add-ons/user-defined-add-ons/)
+* [System Images](./system-images/system-images.md)
+* [Services](./services/services.md)
+* [Extra Args and Binds and Environment Variables](./services/services-extras/services-extras.md)
+* [External Etcd](./services/external-etcd/external-etcd.md)
+* [Authentication](./authentication/authentication.md)
+* [Authorization](./authorization/authorization.md)
+* [Rate Limiting](./rate-limiting/rate-limiting.md)
+* [Cloud Providers](./cloud-providers/cloud-providers.md)
+* [Audit Log](./audit-log/audit-log.md)
+* [Add-ons](./add-ons/add-ons.md)
+  * [Network Plug-ins](./add-ons/network-plugins/network-plugins.md)
+  * [DNS providers](./add-ons/dns/dns.md)
+  * [Ingress Controllers](./add-ons/ingress-controllers/ingress-controllers.md)
+  * [Metrics Server](./add-ons/metrics-server/metrics-server.md)
+  * [User-Defined Add-ons](./add-ons/user-defined-add-ons/user-defined-add-ons.md)
   * [Add-ons Job Timeout](#add-ons-job-timeout)
 
 
@@ -62,7 +62,7 @@ ignore_docker_version: true
 
 ### Kubernetes Version
 
-For information on upgrading Kubernetes, refer to the [upgrade section.](upgrades/)
+For information on upgrading Kubernetes, refer to the [upgrade section.](../upgrades/upgrades.md)
 
 Rolling back to previous Kubernetes versions is not supported.
 
@@ -81,7 +81,7 @@ prefix_path: /opt/custom_path
 
 ### Cluster Level SSH Key Path
 
-RKE connects to host(s) using `ssh`. Typically, each node will have an independent path for each ssh key, i.e. `ssh_key_path`, in the `nodes` section, but if you have a SSH key that is able to access **all** hosts in your cluster configuration file, you can set the path to that ssh key at the top level. Otherwise, you would set the ssh key path in the [nodes](config-options/nodes/).
+RKE connects to host(s) using `ssh`. Typically, each node will have an independent path for each ssh key, i.e. `ssh_key_path`, in the `nodes` section, but if you have a SSH key that is able to access **all** hosts in your cluster configuration file, you can set the path to that ssh key at the top level. Otherwise, you would set the ssh key path in the [nodes](./nodes/nodes.md).
 
 If ssh key paths are defined at the cluster level and at the node level, the node-level key will take precedence.
 
@@ -111,7 +111,7 @@ $ echo $SSH_AUTH_SOCK
 
 ### Add-ons Job Timeout
 
-You can define [add-ons](config-options/add-ons/) to be deployed after the Kubernetes cluster comes up, which uses Kubernetes [jobs](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/). RKE will stop attempting to retrieve the job status after the timeout, which is in seconds. The default timeout value is `30` seconds.
+You can define [add-ons](./add-ons/add-ons.md) to be deployed after the Kubernetes cluster comes up, which uses Kubernetes [jobs](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/). RKE will stop attempting to retrieve the job status after the timeout, which is in seconds. The default timeout value is `30` seconds.
 
 ### cri-dockerd
 
