@@ -158,6 +158,9 @@ kubectl -n kube-system get deploy calico-kube-controllers -o jsonpath='{.spec.te
 ```
 
 ## Weave
+
+Weave is deprecated in v1.27 and will be removed in v1.30
+
 ### Weave Network Plug-in Options
 
 ```yaml

@@ -31,7 +31,7 @@ Users added to the `docker` group are granted effective root permissions on the 
   - [Calico](https://docs.projectcalico.org/getting-started/kubernetes/requirements#kernel-dependencies)
   - [Flannel](https://github.com/flannel-io/flannel/tree/master/Documentation)
   - Canal (Combination Calico and Flannel)
-  - [Weave](https://www.weave.works/docs/net/latest/install/installing-weave/)
+  - [Weave](https://www.weave.works/docs/net/latest/install/installing-weave/) (Deprecated)
 
 :::note
 
