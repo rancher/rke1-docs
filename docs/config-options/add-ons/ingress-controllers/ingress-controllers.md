@@ -129,7 +129,7 @@ By default, the nginx ingress controller is configured using `hostNetwork: true`
 </TabItem>
 </Tabs>
 
-Configure the nginx ingress controller using `hostPort` and override the default ports:
+Here's an example of how to configure the nginx ingress controller using `hostPort` and override the default ports:
 
 ```yaml
 ingress:
@@ -138,11 +138,11 @@ ingress:
   http_port: 9090
   https_port: 9443
   extra_args:
-    http-port: 8080
-    https-port: 8443
+    http-port: 3080
+    https-port: 3443
 ```
 
-Configure the nginx ingress controller using `hostNetwork`:
+Here's an example of how to configure the nginx ingress controller using `hostNetwork`:
 
 ```yaml
 ingress:
@@ -150,7 +150,7 @@ ingress:
   network_mode: hostNetwork
 ```
 
-Configure the nginx ingress controller with no network mode which will make it run on the overlay network (for example, if you want to expose the nginx ingress controller using a `LoadBalancer`) and override the default ports:
+Here's an example of how to configure the nginx ingress controller with no network mode which will make it run on the overlay network (for example, if you want to expose the nginx ingress controller using a `LoadBalancer`) and override the default ports:
 
 ```yaml
 ingress:
