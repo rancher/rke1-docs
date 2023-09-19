@@ -319,7 +319,7 @@ cloud_provider:
 # up on trying to get the job status after this timeout in seconds..
 addon_job_timeout: 30
 
-# Specify network plugin-in (canal, calico, flannel, weave, or none)
+# Specify network plugin-in (canal, calico, flannel or none)
 network:
   plugin: canal
   # Specify MTU

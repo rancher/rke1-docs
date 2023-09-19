@@ -90,7 +90,7 @@ If the CA certificate needs to be rotated, you are required to rotate all the se
 
 Rotating the CA certificate will result in restarting other system pods, that will also use the new CA certificate. This includes:
 
-- Networking pods (canal, calico, flannel, and weave)
+- Networking pods (canal, calico and flannel)
 - Ingress Controller pods
 - KubeDNS pods
 
