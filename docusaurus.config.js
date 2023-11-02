@@ -31,16 +31,65 @@ module.exports = {
       },
       items: [
         {
-          href: 'https://github.com/rancher/rke1-docs',
-          label: 'GitHub',
+          type: 'dropdown',
+          label: 'Quick Links',
           position: 'right',
-          className: 'navbar__github',
+          items: [
+            {
+              href: 'https://github.com/rancher/rke',
+              label: 'GitHub',
+            },
+            {
+              href: 'https://github.com/rancher/rke1-docs',
+              label: 'Docs GitHub',
+            },
+          ]
         },
         {
-          href: 'https://www.rancher.com',
-          label: 'Rancher Home',
+          type: 'dropdown',
+          label: 'More from SUSE',
           position: 'right',
-        },
+          items: [
+            {
+              href: 'https://www.rancher.com',
+              label: 'Rancher',
+              className: 'navbar__icon navbar__rancher',
+            },
+            {
+              type: 'html',
+              value: '<hr style="margin: 0.3rem 0;">',
+            },
+            {
+              href: 'https://elemental.docs.rancher.com/',
+              label: 'Elemental',
+              className: 'navbar__icon navbar__elemental',
+            },
+            {
+              href: 'https://epinio.io/',
+              label: 'Epinio',
+              className: 'navbar__icon navbar__epinio',
+            },
+            {
+              href: 'https://fleet.rancher.io/',
+              label: 'Fleet',
+              className: 'navbar__icon navbar__fleet',
+            },
+            {
+              href: 'https://harvesterhci.io',
+              label: 'Harvester',
+              className: 'navbar__icon navbar__harvester',
+            },
+            {
+              type: 'html',
+              value: '<hr style="margin: 0.3rem 0;">',
+            },
+            {
+              href: 'https://opensource.suse.com',
+              label: 'More Projects...',
+              className: 'navbar__icon navbar__suse',
+            },
+          ]
+        }
       ],
     },
     footer: {
