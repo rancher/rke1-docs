@@ -31,6 +31,10 @@ module.exports = {
       },
       items: [
         {
+          type: 'search',
+          position: 'left',
+        },
+        {
           type: 'dropdown',
           label: 'Quick Links',
           position: 'right',
