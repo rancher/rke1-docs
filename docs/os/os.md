@@ -67,7 +67,7 @@ rpm -q docker
 
 #### Adding the Software repository for docker
 In SUSE Linux Enterprise Server 15 SP2 docker is found in the Containers module.
-This module will need to be added before istalling docker.
+This module will need to be added before installing docker.
 
 To list available modules you can run SUSEConnect to list the extensions and the activation command
 ```
