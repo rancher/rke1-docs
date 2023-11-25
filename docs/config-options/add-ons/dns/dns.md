@@ -257,7 +257,7 @@ dns:
 
 By removing the `ip_address` value, NodeLocal DNS will be removed from the cluster.
 
-:::caution
+:::warning
 
 When removing NodeLocal DNS, a disruption to DNS can be expected. The updated `/etc/resolv.conf` configuration will take effect only for pods that are started after removing NodeLocal DNS. In general pods using the default `dnsPolicy: ClusterFirst` will need to be re-deployed.
 
