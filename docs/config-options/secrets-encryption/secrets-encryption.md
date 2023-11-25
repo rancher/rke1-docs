@@ -121,7 +121,7 @@ With managed configuration, RKE provides the user with a very simple way to enab
 
 With custom encryption configuration, RKE allows the user to provide their own configuration. Although RKE will help the user to deploy the configuration and rewrite the secrets if needed, it doesn't provide a configuration validation on user's behalf. It's the user responsibility to make sure their configuration is valid.
 
-:::caution
+:::warning
 
 Using invalid Encryption Provider Configuration could cause several issues with your cluster, ranging from crashing the Kubernetes API service, `kube-api`,  to completely losing access to encrypted data.
 

@@ -9,7 +9,7 @@ RKE provides the following network plug-ins that are deployed as add-ons:
 - Canal
 - Weave
 
-:::caution
+:::warning
 
 After you launch the cluster, you cannot change your network provider. Therefore, choose which network provider you want to use carefully, as Kubernetes doesn’t allow switching between network providers. Once a cluster is created with a network provider, changing network providers would require you tear down the entire cluster and all its applications.
 
@@ -159,7 +159,7 @@ kubectl -n kube-system get deploy calico-kube-controllers -o jsonpath='{.spec.te
 
 ## Weave
 
-:::caution
+:::warning
 
 Weave is deprecated in v1.27 and will be removed in v1.30
 
