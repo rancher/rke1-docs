@@ -321,7 +321,7 @@ kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 
 To migrate from an in-tree cloud provider to the out-of-tree AWS cloud provider, you must stop the existing cluster's kube controller manager and install the AWS cloud controller manager. There are many ways to do this. Refer to the official AWS documentation on the [external cloud controller manager](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for details.
 
-If it's acceptable to have some downtime, you can [switch to an external cloud provider](#using-out-of-tree-aws-cloud-provider), which removes in-tree components and then deploy charts to install the AWS cloud controller manager.
+If it's acceptable to have some downtime, you can [switch to an external cloud provider](#using-the-out-of-tree-aws-cloud-provider-for-rke), which removes in-tree components and then deploy charts to install the AWS cloud controller manager.
 
 If your setup can't tolerate any control plane downtime, you must enable leader migration. This facilitates a smooth transition from the controllers in the kube controller manager to their counterparts in the cloud controller manager. Refer to the official AWS documentation on [Using Leader Migration](https://cloud-provider-aws.sigs.k8s.io/getting_started/#using-leader-migration) for more details.
 
