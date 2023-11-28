@@ -6,7 +6,7 @@ title: AWS Cloud Provider
 
 In Kubernetes 1.27 and later, you must use an out-of-tree AWS cloud provider. In-tree cloud providers have been deprecated, and the Amazon cloud provider has been removed completely, and won't work after an upgrade to Kubernetes 1.27. The steps listed below are still required to set up an Amazon cloud provider. You can [set up an out-of-tree cloud provider for RKE](#using-the-out-of-tree-aws-cloud-provider-for-rke) after creating an [appropriate IAM role](#iam-requirements) and [configuring the ClusterID](#tagging-aws-resources).
 
-You can also [migrate from an in-tree to an out-of-tree AWS cloud provider](#migrating-to-the-out-of-tree-aws-cloud-provider-for-rke1) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
+You can also [migrate from an in-tree to an out-of-tree AWS cloud provider](#migrating-to-the-out-of-tree-aws-cloud-provider-for-rke) on Kubernetes 1.26 and earlier. All existing clusters must migrate prior to upgrading to v1.27 in order to stay functional.
 
 To enable the AWS cloud provider, there are no RKE configuration options. You only need to set the name as `aws`. In order to use the AWS cloud provider, all cluster nodes must have already been configured with an [appropriate IAM role](#iam-requirements) and your AWS resources must be [tagged with a cluster ID](#tagging-aws-resources).
 
@@ -153,9 +153,9 @@ When provisioning a `LoadBalancer` service Kubernetes will attempt to discover t
 
 [AWS Documentation: Subnet tagging for load balancers](https://docs.aws.amazon.com/eks/latest/userguide/load-balancing.html#subnet-tagging-for-load-balancers)
 
-### Using the Out-of-Tree AWS Cloud Provider for RKE1 
+### Using the Out-of-Tree AWS Cloud Provider for RKE
 
-1. [Node name conventions and other prerequisities ](https://cloud-provider-aws.sigs.k8s.io/prerequisites/) must be followed so that the cloud provider can find the instance. RKE provisioned clusters don't support configuring `providerID`. 
+1. [Node name conventions and other prerequisites ](https://cloud-provider-aws.sigs.k8s.io/prerequisites/) must be followed so that the cloud provider can find the instance. RKE provisioned clusters don't support configuring `providerID`. 
 
 :::note
 
@@ -182,9 +182,9 @@ Existing clusters that use `external` cloud provider will set `--cloud-provider=
 
 ### Helm Chart Installation from CLI
 
-Official upstream docs for [helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on Github.
+Official upstream docs for [Helm chart installation](https://github.com/kubernetes/cloud-provider-aws/tree/master/charts/aws-cloud-controller-manager) can be found on GitHub.
 
-1. Add the helm repository:
+1. Add the Helm repository:
 
 ```shell
 helm repo add aws-cloud-controller-manager https://kubernetes.github.io/cloud-provider-aws
@@ -293,19 +293,19 @@ clusterRoleRules:
       - create
 ```
 
-3. Install the helm chart:
+3. Install the Helm chart:
 
 ```shell
 helm upgrade --install aws-cloud-controller-manager -n kube-system aws-cloud-controller-manager/aws-cloud-controller-manager --values values.yaml
 ```
 
-Verify that the helm chart installed successfully:
+Verify that the Helm chart installed successfully:
 
 ```shell
 helm status -n kube-system aws-cloud-controller-manager
 ```
 
-4. If present, edit daemonset to remove the default node selector `node-role.kubernetes.io/control-plane: ""`:
+4. If present, edit the DaemonSet to remove the default node selector `node-role.kubernetes.io/control-plane: ""`:
 
 ```shell
 kubectl edit daemonset aws-cloud-controller-manager -n kube-system
@@ -317,17 +317,17 @@ kubectl edit daemonset aws-cloud-controller-manager -n kube-system
 kubectl rollout status daemonset -n kube-system aws-cloud-controller-manager
 ```
 
-### Migrating to the Out-of-Tree AWS Cloud Provider for RKE1
+### Migrating to the Out-of-Tree AWS Cloud Provider for RKE
 
 To migrate from an in-tree cloud provider to the out-of-tree AWS cloud provider, you must stop the existing cluster's kube controller manager and install the AWS cloud controller manager. There are many ways to do this. Refer to the official AWS documentation on the [external cloud controller manager](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for details.
 
 If it's acceptable to have some downtime, you can [switch to an external cloud provider](#using-out-of-tree-aws-cloud-provider), which removes in-tree components and then deploy charts to install the AWS cloud controller manager.
 
-If your setup can't tolerate any control plane downtime, you must enable leader migration. This facilitates a smooth transition from the controllers in the kube controller manager to their counterparts in the cloud controller manager. Refer to the official AWS documentation on [Using leader migration](https://cloud-provider-aws.sigs.k8s.io/getting_started/) for more details.
+If your setup can't tolerate any control plane downtime, you must enable leader migration. This facilitates a smooth transition from the controllers in the kube controller manager to their counterparts in the cloud controller manager. Refer to the official AWS documentation on [Using Leader Migration](https://cloud-provider-aws.sigs.k8s.io/getting_started/#using-leader-migration) for more details.
 
 :::note Important
 
-The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) mentions that it is possible to migrate with the same Kubernetes version, but assumes that migration is part of a  Kubernetes upgrade.
+The Kubernetes [cloud controller migration documentation](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#before-you-begin) mentions that it is possible to migrate with the same Kubernetes version, but assumes that migration is part of a Kubernetes upgrade.
 
 Refer to the Kubernetes documentation on [migrating to use the cloud controller manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/) to see if you need to customize your setup before migrating. Confirm your [migration configuration values](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#default-configuration). If your cloud provider provides an implementation of the Node IPAM controller, you also need to [migrate the IPAM controller](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/#node-ipam-controller-migration).
 
