@@ -7,11 +7,9 @@ import TabItem from '@theme/TabItem';
 
 After RKE has deployed Kubernetes, you can upgrade the versions of the components in your Kubernetes cluster, the [definition of the Kubernetes services](../config-options/services/services.md) or the [add-ons](../config-options/add-ons/add-ons.md).
 
-The default Kubernetes version for each RKE version can be found in the release notes accompanying [the RKE download](https://github.com/rancher/rke/releases/). RKE v1.x should be used.
+The default Kubernetes version for each RKE version can be found in the release notes accompanying [the RKE download](https://github.com/rancher/rke/releases/). These can also be checked with the [rke CLI](#listing-supported-kubernetes-versions)
 
-You can also select a newer version of Kubernetes to install for your cluster.
-
-Each version of RKE has a specific [list of supported Kubernetes versions.](#listing-supported-kubernetes-versions)
+You can also select a newer version of Kubernetes to install for your cluster but please avoid skipping minor versions, as this can increase the chances of an issue due to accumulated changes, as per the [upstream Kubernetes documentation](https://kubernetes.io/releases/version-skew-policy/)
 
 In case the Kubernetes version is defined in the `kubernetes_version` directive and under the `system-images` directive, the `system-images` configuration will take precedence over the `kubernetes_version`.
 
