@@ -121,7 +121,11 @@ https://kubic.opensuse.org/blog/2021-02-08-MicroOS-Kubic-Rancher-RKE/
 
 ### Red Hat Enterprise Linux (RHEL) / Oracle Linux (OL) / CentOS
 
-If using Red Hat Enterprise Linux, Oracle Linux or CentOS, you cannot use the `root` user as [SSH user](../config-options/nodes/nodes.md#ssh-users) due to [Bugzilla 1527565](https://bugzilla.redhat.com/show_bug.cgi?id=1527565). Please follow the instructions below how to setup Docker correctly, based on the way you installed Docker on the node.
+If using Red Hat Enterprise Linux, Oracle Linux or CentOS, you cannot use the `root` user as [SSH user](../config-options/nodes/nodes.md#ssh-users) due to [Bugzilla 1527565](https://bugzilla.redhat.com/show_bug.cgi?id=1527565). 
+
+Do not use the RHEL/CentOS packaged Docker because, in reality, it is using Podman and that breaks RKE installation. Instead, fetch Docker from upstream, for example by following this [link's instructions](https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-requirements/install-docker).
+
+Please follow [Manage Docker as a non-root user](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user) to complete the installation.
 
 :::note
 
@@ -140,50 +144,6 @@ In addition, the default firewall settings of RHEL 8.4 prevent RKE1 pods from re
 ```
 
 :::
-
-#### Using upstream Docker
-If you are using upstream Docker, the package name is `docker-ce` or `docker-ee`. You can check the installed package by executing:
-
-```
-rpm -q docker-ce
-```
-
-When using the upstream Docker packages, please follow [Manage Docker as a non-root user](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user).
-
-#### Using RHEL/CentOS packaged Docker
-If you are using the Docker package supplied by Red Hat / CentOS, the package name is `docker`. You can check the installed package by executing:
-
-```
-rpm -q docker
-```
-
-If you are using the Docker package supplied by Red Hat / CentOS, the `dockerroot` group is automatically added to the system. You will need to edit (or create) `/etc/docker/daemon.json` to include the following:
-
-```
-{
-    "group": "dockerroot"
-}
-```
-
-Restart Docker after editing or creating the file. After restarting Docker, you can check the group permission of the Docker socket (`/var/run/docker.sock`), which should show `dockerroot` as group:
-
-```
-srw-rw----. 1 root dockerroot 0 Jul  4 09:57 /var/run/docker.sock
-```
-
-Add the SSH user you want to use to this group, this can't be the `root` user.
-
-```
-usermod -aG dockerroot <user_name>
-```
-
-To verify that the user is correctly configured, log out of the node and login with your SSH user, and execute `docker ps`:
-
-```
-ssh <user_name>@node
-$ docker ps
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-```
 
 ### Red Hat Atomic
 
