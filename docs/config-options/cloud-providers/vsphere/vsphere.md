@@ -1,4 +1,4 @@
-16G16---
+---
 title: vSphere Cloud Provider
 ---
 
