@@ -2,7 +2,7 @@
 title: OpenStack Cloud Provider
 ---
 
-To enable the OpenStack cloud provider, besides setting the name as `openstack`, specific configuration options must be set as defined below. The OpenStack configuration options are grouped into different sections and they must be nested under the `rancher_kubernetes_engine_config` directive in the cluster config YAML file. For more information on the configuration file structure, please see the [Rancher RKE Cluster Configuration Reference](https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#config-file-structure-in-rancher).
+To enable the OpenStack cloud provider, besides setting the name as `openstack`, there are specific configuration options that must be set. The OpenStack configuration options are grouped into different sections provided in an example below.
 
 ```yaml
 cloud_provider:
@@ -23,6 +23,8 @@ cloud_provider:
       metadata:
         search-order: xxxxxxxxxxxxxx
 ```
+
+If you are enabling the OpenStack cloud provider in Rancher the configurations must be nested under the `rancher_kubernetes_engine_config` directive in the cluster config YAML file. See here for more information on the [Rancher configuration file structure](https://ranchermanager.docs.rancher.com/reference-guides/cluster-configuration/rancher-server-configuration/rke1-cluster-configuration#config-file-structure-in-rancher).
 
 ## Overriding the hostname
 
