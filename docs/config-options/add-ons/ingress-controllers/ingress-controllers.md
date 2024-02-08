@@ -3,8 +3,7 @@ title: K8s Ingress Controllers
 description: By default, RKE deploys the NGINX ingress controller. Learn how to schedule and disable default k8s ingress controllers, and how to configure NGINX controller
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 ### Default Ingress
 

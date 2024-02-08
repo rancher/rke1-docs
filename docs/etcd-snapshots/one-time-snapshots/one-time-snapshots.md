@@ -2,8 +2,7 @@
 title: One-time Snapshots
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 One-time snapshots are handled differently depending on your version of RKE.
 

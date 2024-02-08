@@ -2,8 +2,7 @@
 title: Recurring Snapshots
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 Recurring snapshots are handled differently based on your version of RKE.
 

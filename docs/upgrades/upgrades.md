@@ -2,8 +2,7 @@
 title: Upgrades
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 After RKE has deployed Kubernetes, you can upgrade the versions of the components in your Kubernetes cluster, the [definition of the Kubernetes services](../config-options/services/services.md) or the [add-ons](../config-options/add-ons/add-ons.md).
 
