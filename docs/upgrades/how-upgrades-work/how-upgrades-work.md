@@ -2,8 +2,7 @@
 title: How Upgrades Work
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 In this section, you'll learn what happens when you edit or upgrade your RKE Kubernetes cluster. The below sections describe how each type of node is upgraded by default when a cluster is upgraded using `rke up`.
 

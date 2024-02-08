@@ -2,8 +2,7 @@
 title: Restoring from Backup
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 The details of restoring your cluster from backup are different depending on your version of RKE.
 

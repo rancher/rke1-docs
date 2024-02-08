@@ -2,8 +2,7 @@
 title: Example Scenarios
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 These example scenarios for backup and restore are different based on your version of RKE.
 
