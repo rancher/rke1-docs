@@ -8,7 +8,7 @@ The [vSphere Cloud Provider](https://vmware.github.io/vsphere-storage-for-kubern
 
 ## Prerequisites
 
-- **Credentials:** You'll need to have credentials of a vCenter/ESXi user account with privileges allowing the cloud provider to interact with the vSphere infrastructure to provision storage. Refer to [this document](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/vcp-roles.html) to create and assign a role with the required permissions in vCenter.
+- **Credentials:** You'll need to have credentials of a vCenter/ESXi user account with privileges allowing the cloud provider to interact with the vSphere infrastructure to provision storage. Refer to [this document](https://github.com/vmware-archive/vsphere-storage-for-kubernetes/blob/master/documentation/vcp-roles.md) to create and assign a role with the required permissions in vCenter.
 - **VMware Tools** must be running in the Guest OS for all nodes in the cluster.
 - **Disk UUIDs:** All nodes must be configured with disk UUIDs. This is required so that attached VMDKs present a consistent UUID to the VM, allowing the disk to be mounted properly. See the section on [enabling disk UUIDs.](./enabling-uuid/enabling-uuid.md)
 
