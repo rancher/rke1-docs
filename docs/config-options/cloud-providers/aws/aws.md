@@ -165,14 +165,14 @@ If you use IP-based naming, the nodes must be named after the instance followed 
 
 2. Select the cloud provider. 
 
-Selecting `external-aws` sets `--cloud-provider=external` and allows setting `useInstanceMetadataHostname`. Enabling `useInstanceMetadataHostname` will query the EC2 metadata service and set `http://169.254.169.254/latest/meta-data/hostname` as `hostname-override` for `kubelet` and `kube-proxy`. 
+Selecting `external-aws` sets `--cloud-provider=external` and allows setting `use_instance_metadata_hostname`. Enabling `use_instance_metadata_hostname` will query the EC2 metadata service and set `http://169.254.169.254/latest/meta-data/hostname` as `hostname-override` for `kubelet` and `kube-proxy`. 
 
-Enabling `useInstanceMetadataHostname` is required if `hostname-override` is empty or if `hostname-override` doesn't meet the node naming conventions mentioned above in step 1.
+Enabling `use_instance_metadata_hostname` is required if `hostname-override` is empty or if `hostname-override` doesn't meet the node naming conventions mentioned above in step 1.
 
 ```yaml
 cloud_provider:
   name: external-aws
-  useInstanceMetadataHostname: true/false
+  use_instance_metadata_hostname: true/false
 ```
 
 Existing clusters that use `external` cloud provider will set `--cloud-provider=external` for Kubernetes components but won't set the `hostname-override` by querying the EC2 metadata service.
@@ -364,14 +364,14 @@ kubectl cordon -l "node-role.kubernetes.io/controlplane=true"
 
 5. Update `cluster.yml` to change the cloud provider and remove the leader migration arguments from the kube-controller.
 
-Selecting `external-aws` sets `--cloud-provider=external` and allows setting `useInstanceMetadataHostname`. Enabling `useInstanceMetadataHostname` will query the EC2 metadata service and set `http://169.254.169.254/latest/meta-data/hostname` as `hostname-override` for `kubelet` and `kube-proxy`. 
+Selecting `external-aws` sets `--cloud-provider=external` and allows setting `use_instance_metadata_hostname`. Enabling `use_instance_metadata_hostname` will query the EC2 metadata service and set `http://169.254.169.254/latest/meta-data/hostname` as `hostname-override` for `kubelet` and `kube-proxy`. 
 
-Enabling `useInstanceMetadataHostname` is required if `hostname-override` is empty or if `hostname-override` doesn't meet the [node naming conventions](https://cloud-provider-aws.sigs.k8s.io/prerequisites/). 
+Enabling `use_instance_metadata_hostname` is required if `hostname-override` is empty or if `hostname-override` doesn't meet the [node naming conventions](https://cloud-provider-aws.sigs.k8s.io/prerequisites/). 
 
 ```yaml
 cloud_provider:
   name: external-aws
-  useInstanceMetadataHostname: true/false
+  use_instance_metadata_hostname: true/false
 ```
 
 **Remove** `enable-leader-migration` from:
