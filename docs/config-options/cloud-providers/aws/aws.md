@@ -170,10 +170,9 @@ Selecting `external-aws` sets `--cloud-provider=external` and allows setting `us
 Enabling `useInstanceMetadataHostname` is required if `hostname-override` is empty or if `hostname-override` doesn't meet the node naming conventions mentioned above in step 1.
 
 ```yaml
-rancher_kubernetes_engine_config:
-  cloud_provider:
-    name: external-aws
-    useInstanceMetadataHostname: true/false
+cloud_provider:
+  name: external-aws
+  useInstanceMetadataHostname: true/false
 ```
 
 Existing clusters that use `external` cloud provider will set `--cloud-provider=external` for Kubernetes components but won't set the `hostname-override` by querying the EC2 metadata service.
@@ -370,10 +369,9 @@ Selecting `external-aws` sets `--cloud-provider=external` and allows setting `us
 Enabling `useInstanceMetadataHostname` is required if `hostname-override` is empty or if `hostname-override` doesn't meet the [node naming conventions](https://cloud-provider-aws.sigs.k8s.io/prerequisites/). 
 
 ```yaml
-rancher_kubernetes_engine_config:
-  cloud_provider:
-    name: external-aws
-    useInstanceMetadataHostname: true/false
+cloud_provider:
+  name: external-aws
+  useInstanceMetadataHostname: true/false
 ```
 
 **Remove** `enable-leader-migration` from:
