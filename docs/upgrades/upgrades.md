@@ -10,7 +10,7 @@ The default Kubernetes version for each RKE version can be found in the release 
 
 You can also select a newer version of Kubernetes to install for your cluster but please avoid skipping minor versions, as this can increase the chances of an issue due to accumulated changes, as per the [upstream Kubernetes documentation](https://kubernetes.io/releases/version-skew-policy/)
 
-In case the Kubernetes version is defined in the `kubernetes_version` directive and under the `system-images` directive, the `system-images` configuration will take precedence over the `kubernetes_version`.
+In case the Kubernetes version is defined in the `kubernetes_version` directive and under the `system_images` directive, the `system_images` configuration will take precedence over the `kubernetes_version`.
 
 ### How Upgrades Work
 
