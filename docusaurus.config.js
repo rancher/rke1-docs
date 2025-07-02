@@ -112,6 +112,11 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true,
           editUrl: 'https://github.com/rancher/rke1-docs/edit/main/',
+          versions: {
+            current: {
+              banner: 'unmaintained',
+            }
+          }
         },
         blog: false, // Optional: disable the blog plugin
         // ...
