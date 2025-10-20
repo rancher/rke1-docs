@@ -20,7 +20,7 @@ The one-time snapshot can be uploaded to a S3 compatible backend by using the ad
 To create a local one-time snapshot, run:
 
 ```
-$ rke etcd snapshot-save --config cluster.yml --name snapshot-name
+rke etcd snapshot-save --config cluster.yml --name snapshot-name
 ```
 
 **Result:** The snapshot is saved in `/opt/rke/etcd-snapshots`.
@@ -28,7 +28,7 @@ $ rke etcd snapshot-save --config cluster.yml --name snapshot-name
 To save a one-time snapshot to S3, run:
 
 ```
-$ rke etcd snapshot-save \
+rke etcd snapshot-save \
 --config cluster.yml \
 --name snapshot-name \
 --s3 \
@@ -106,7 +106,7 @@ RKE saves a backup of the certificates, i.e. a file named `pki.bundle.tar.gz`, i
 To create a local one-time snapshot, run:
 
 ```
-$ rke etcd snapshot-save --config cluster.yml --name snapshot-name
+rke etcd snapshot-save --config cluster.yml --name snapshot-name
 ```
 
 **Result:** The snapshot is saved in `/opt/rke/etcd-snapshots`.
