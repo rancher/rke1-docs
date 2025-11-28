@@ -32,7 +32,7 @@
 | TCP | 443 | <ul><li>Any that consumes Ingress services</li></ul> | Ingress controller (HTTPS) |
 | TCP | 2376 | <ul><li>Rancher nodes</li></ul> | Docker daemon TLS port used by Docker Machine (only needed when using Node Driver/Templates) |
 | TCP | 6443 | <ul><li>etcd nodes</li><li>controlplane nodes</li><li>worker nodes</li></ul> | Kubernetes apiserver |
-| UDP | 472 | <ul><li>etcd nodes</li><li>controlplane nodes</li><li>worker nodes</li></ul> | Canal/Flannel VXLAN overlay networking |
+| UDP | 8472 | <ul><li>etcd nodes</li><li>controlplane nodes</li><li>worker nodes</li></ul> | Canal/Flannel VXLAN overlay networking |
 | TCP | 9099 | <ul><li>controlplane node itself ([local traffic](#information-on-local-node-traffic), not across nodes)</li></ul> | Canal/Flannel livenessProbe/readinessProbe |
 | TCP | 10250 | <ul><li>Metrics server communications with all nodes</li></ul> | kubelet |
 | TCP | 10254 | <ul><li>controlplane node itself ([local traffic](#information-on-local-node-traffic), not across nodes)</li></ul> | Ingress controller livenessProbe/readinessProbe |
