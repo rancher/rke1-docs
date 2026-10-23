@@ -37,12 +37,14 @@ function UnmaintainedVersionLabel({siteTitle, versionMetadata}) {
         // siteTitle,
         // versionLabel: <b>{versionMetadata.label}</b>,
         kbArticle: <a href="https://www.suse.com/support/kb/doc/?id=000021518"><b>Knowledgebase</b></a>,
-        eolDate: <b>July 31, 2025</b>
+        eolDate: <b>July 31, 2025</b>,
+        rke2Docs: <a href="https://docs.rke2.io/"><b>RKE2</b></a>,
+        k3sDocs: <a href="https://docs.k3s.io/"><b>K3s</b></a>
       }}>
       {
         // 'This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.'
         // Custom EOL messaging
-        'Rancher Kubernetes Engine (RKE/RKE1) will reach end of life on {eolDate}. Rancher 2.12.0 and later will no longer support provisioning or managing downstream RKE1 clusters. We recommend replatforming RKE1 clusters to RKE2 to ensure continued support and security updates. Learn more about the transition through our {kbArticle}.'
+        'Rancher Kubernetes Engine (RKE/RKE1) reached end of life on {eolDate} and is no longer supported. RKE1 is superseded by {rke2Docs}. Rancher 2.12.0 and later do not support provisioning or managing downstream RKE1 clusters. Replatform your RKE1 clusters to RKE2 to keep receiving support and security updates, following the migration guidance in our {kbArticle}. For lightweight and edge use cases, see {k3sDocs}.'
       }
     </Translate>
   );

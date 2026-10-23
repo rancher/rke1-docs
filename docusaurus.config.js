@@ -84,6 +84,16 @@ module.exports = {
               className: 'navbar__icon navbar__harvester',
             },
             {
+              href: 'https://docs.rke2.io/',
+              label: 'RKE2',
+              className: 'navbar__icon navbar__noicon',
+            },
+            {
+              href: 'https://docs.k3s.io/',
+              label: 'K3s',
+              className: 'navbar__icon navbar__noicon',
+            },
+            {
               type: 'html',
               value: '<hr style="margin: 0.3rem 0;">',
             },
