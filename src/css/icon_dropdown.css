@@ -64,3 +64,8 @@
     padding-bottom: 7px;
     background-color: #30ba78;
   }
+  /* No icon asset for these; keep the label aligned with the others */
+  .navbar__noicon:before {
+    background-color: transparent;
+    width: 35px;
+  }
